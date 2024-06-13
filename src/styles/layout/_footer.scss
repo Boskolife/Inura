@@ -1,0 +1,107 @@
+#footer {
+    .footer_top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 30px;
+        padding: 35px 0 30px 0;
+    }
+
+    .logo {
+        max-width: 105px;
+    }
+
+    .menu_list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+
+        @include media('<tablet'){
+            flex-direction: column;
+        }
+    }
+
+    .menu_link {
+        color: #FFF;
+        text-align: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        letter-spacing: 0.2px;
+        text-transform: uppercase;
+        transition: all .3s ease 0s;
+
+        &:hover {
+            text-shadow: 0px 0px 30px #FFF;
+            transition: all .3s ease 0s;
+        }
+    }
+
+    .footer_bottom {
+        padding: 25px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 25px;
+        position: relative;
+
+        @include media('<tablet'){
+            flex-direction: column;
+        }
+    }
+
+    .footer_bottom-line {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+    }
+
+    .copyrights {
+        color: #FEFBF4;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+        @include media('<tablet'){
+            order: 3;
+        }
+    }
+
+    .social_media {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+
+        @include media('<tablet'){
+            order: 1;
+        }
+    }
+
+    .media_link {
+
+        svg {
+            fill: #fff;
+            transition: all .3s ease 0s;
+
+            &:hover {
+                fill: #231848;
+                transition: all .3s ease 0s;
+            }
+        }
+    }
+
+    .creator {
+        max-width: 200px;
+        width: 100%;
+
+        @include media('<tablet'){
+            order: 2;
+        }
+    }
+}
