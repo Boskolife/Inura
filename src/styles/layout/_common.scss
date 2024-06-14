@@ -366,7 +366,7 @@ html {
     .star {
         position: absolute;
         animation: shine 5s ease infinite alternate;
-        // background-color: #0E0A1B;
+        background-color: #0E0A1B;
     }
 
     .journey_star_1 {
@@ -518,12 +518,34 @@ html {
     }
 }
 
+#features {
+    background-color: #0E0A1B;
+}
+
 .features {
     padding: 100px 0;
     overflow: hidden;
 
     .content {
         text-align: center;
+        position: relative;
+
+        //Мешает работе mis-blend-mode на svg
+
+        // @include media('<phone_max') {
+        //     &::after {
+        //         content: '';
+        //         position: absolute;
+        //         top: 0;
+        //         left: 0;
+        //         width: 100%;
+        //         height: 100%;
+        //         border-radius: 369px;
+        //         background: #231848;
+        //         filter: blur(137px);
+        //         z-index: -1;
+        //     }
+        // }
     }
 
     .tip {
@@ -578,21 +600,9 @@ html {
         flex-wrap: wrap;
         row-gap: 15px;
         position: relative;
+        // z-index: 2;
 
-        @include media('<phone_max') {
-            &::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 130%;
-                height: 100%;
-                border-radius: 369px;
-                background: #231848;
-                filter: blur(137px);
-                z-index: -1;
-            }
-        }
+
 
         @include media('<phone_max') {
             flex-direction: column;
@@ -609,9 +619,6 @@ html {
         letter-spacing: 0.2px;
     }
 
-    // .star{
-    //       background-color: #0E0A1B;
-    // }
 
     .second_star {
         display: none;
@@ -628,7 +635,10 @@ html {
     }
 
     .features_swiper {
-        margin-bottom: 30px;
+
+        @include media('<phone_max') {
+            margin-bottom: 30px;
+        }
 
         .swiper-slide-active .slider_img {
             transform: none;
@@ -742,31 +752,13 @@ html {
     .features_title,
     .features_text {
         padding: 0 15px;
-    }
-
-    .hot_it_works_img {
-        z-index: -1;
         position: relative;
-        height: auto;
-        width: 100%;
-        margin: 0 auto;
-        @include adaptive-value("margin-top", -270, -130, 1);
-        margin-bottom: 20px;
-
-        @include media('<1440px') {
-            @include adaptive-value("height", 610, 345, 1);
-        }
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+        z-index: 2;
     }
 
     .cards_swiper {
         @include adaptive-value("margin-top", -270, -125, 1);
-        z-index: -1;
+        // z-index: -1;
         padding-bottom: 150px;
 
         @include media('<phone') {
@@ -787,6 +779,8 @@ html {
 
     .white_btn {
         margin-top: -50px;
+        position: relative;
+        z-index: 2;
     }
 }
 
@@ -1050,11 +1044,133 @@ html {
         left: 0;
         max-width: 515px;
         width: 100%;
+        z-index: 1;
     }
 
     .planet {
         animation-duration: 3.5s;
         border-radius: 448.047px;
         box-shadow: -43.081px -39.635px 193.005px 0px rgba(201, 149, 244, 0.20), 0px 0px 206.791px 0px rgba(237, 223, 253, 0.06);
+    }
+}
+
+.hot_it_works_page {
+    padding-bottom: 100px;
+    @include adaptive-value("padding-top", 100, 50, 1);
+
+
+    .content {
+        max-width: 1030px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        @include adaptive-value("gap", 80, 60, 1);
+    }
+
+    .main_title {
+        text-align: center;
+        text-shadow: 0px 0px 6px rgba(234, 221, 255, 0.30);
+        @include adaptive-value("font-size", 48, 40, 1);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%;
+        text-transform: capitalize;
+        background: linear-gradient(87deg, #FFF 6.14%, rgba(229, 212, 246, 0.90) 95.63%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        @include adaptive-value("margin-bottom", 80, 50, 1);
+    }
+
+    .card_wrap {
+        &:nth-child(even) {
+            .card_content {
+                flex-direction: row-reverse;
+
+                @include media('<tablet') {
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+
+    .card_content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+
+        @include media('<tablet') {
+            flex-direction: column;
+        }
+    }
+
+    .anchor {
+        position: relative;
+        top: -230px;
+        width: 0;
+        height: 0;
+
+        @include media('<phone_max') {
+            top: -190px;
+        }
+    }
+
+    .card_img {
+        max-width: 388px;
+        width: 100%;
+
+        @include media('<tablet') {
+            @include adaptive-value("height", 652, 367, 1);
+            @include adaptive-value("width", 388, 220, 1);
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .card_text {
+        max-width: 522px;
+        width: 100%;
+    }
+
+    .number {
+        color: #A89DFF;
+        text-align: center;
+        text-shadow: 0px 0px 20px rgba(26, 15, 51, 0.70);
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%;
+        letter-spacing: 1.44px;
+        text-transform: uppercase;
+        display: inline-block;
+        @include adaptive-value("margin-bottom", 25, 10, 1);
+    }
+
+    .card_title {
+        text-shadow: 0px 0px 4px rgba(234, 221, 255, 0.40);
+        @include adaptive-value("font-size", 32, 24, 1);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+        text-transform: capitalize;
+        background: linear-gradient(88deg, #FFF 6.17%, #E5D4F6 105.1%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 10px;
+    }
+
+    .card_text {
+        color: rgba(255, 255, 255, 0.80);
+        @include adaptive-value("font-size", 20, 16, 1);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        letter-spacing: 0.2px;
     }
 }

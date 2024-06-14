@@ -12,6 +12,9 @@ htmlFiles.forEach((file) => {
 export default defineConfig({
   base: '/Inura',
   root: 'src',
+  server:{
+    host:'192.168.0.105',
+  },
   publicDir: '../public',
   plugins: [
     handlebars({ partialDirectory: resolve(__dirname, 'src/templates') }),
@@ -23,4 +26,5 @@ export default defineConfig({
     outDir: '../dist/',
     emptyOutDir: true,
   },
+
 });

@@ -1,4 +1,4 @@
-#header {
+.header {
     @include adaptive-value("padding-top", 35, 15, 1);
     @include adaptive-value("padding-bottom", 35, 15, 1);
     position: absolute;
@@ -140,6 +140,111 @@
         span {
             opacity: 0;
             transition: all .3s ease 0s;
+        }
+    }
+}
+
+.header_work {
+    padding-bottom: 0;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0E0A1B;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -100px;
+        left: 0;
+        width: 100%;
+        height: 200%;
+        z-index: -1;
+        background: linear-gradient(180deg, #0E0A1B 68.97%, rgba(14, 10, 27, 0.00) 100%);
+    }
+
+    .container {
+        padding: 0;
+    }
+
+    .header_content {
+        padding: 0 15px
+    }
+
+    .page_nav_menu {
+        padding: 30px 15px 30px 15px;
+        position: relative;
+        overflow: hidden;
+        border-bottom: 1px solid #AA9FFF;
+
+        @include media('<phone_max'){
+            padding: 30px 0 15px 15px;
+        }
+    }
+
+    .page_nav_menu-list {
+        display: grid;
+        grid-template: 1fr/ repeat(auto-fit, minmax(110px, 1fr));
+        gap: 10px;
+        grid-auto-flow: column;
+        justify-content: flex-start;
+        overflow-y: scroll;
+
+
+        @include media('<phone_max') {
+            grid-template: 1fr/ repeat(auto-fit, minmax(190px, 1fr));
+        }
+
+        &::-webkit-scrollbar {
+            display: none;
+
+            ::-webkit-scrollbar-track {
+                display: none;
+            }
+
+            ::-webkit-scrollbar-thumb {
+                display: none;
+            }
+        }
+    }
+
+    .page_nav_menu-item {
+        border-radius: 18px;
+        border: 1px solid #AA9FFF;
+        background: linear-gradient(180deg, rgba(145, 130, 255, 0.25) 0%, rgba(145, 130, 255, 0.05) 100%);
+        box-shadow: 0px 0px 20px 0px rgba(24, 19, 65, 0.60), 0px 0px 6px 0px rgba(31, 24, 85, 0.60) inset;
+        backdrop-filter: blur(2px);
+        padding: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        min-width: 110px;
+
+        @include media('<phone_max') {
+            min-width: 190px;
+        }
+    }
+
+    .item_img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .item_name {
+        color: #FFF;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 140%;
+        letter-spacing: 0.2px;
+    }
+
+    .hidden_word{
+        display: none;
+
+        @include media('<phone_max'){
+            display: inline-block;
         }
     }
 }

@@ -1,5 +1,6 @@
 new WOW().init();
 burgerMenu();
+
 document.addEventListener('DOMContentLoaded', function () {
   const featuresItems = document.querySelectorAll('.item_name');
 
@@ -119,3 +120,4 @@ function burgerMenu() {
     });
   });
 }
+
