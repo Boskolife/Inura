@@ -183,11 +183,12 @@ html {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 98%;
-        height: 98%;
+        width: 97%;
+        height: 97.5%;
         border-radius: 15px;
-        border: 1px solid rgba(255, 255, 255, 0.80);
+        background: rgba(14, 7, 36);
         box-shadow: 0px 0px 64px 0px rgba(94, 25, 182, 0.20) inset;
+        z-index: -1;
     }
 
     &::after {
@@ -201,6 +202,18 @@ html {
         width: 214px;
         height: 194px;
         z-index: -1;
+    }
+
+    .rectanlge {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 98%;
+        height: 98%;
+        border-radius: 15px;
+        background: linear-gradient(208deg, rgba(255, 255, 255, 0.80) 0%, #8D66BF 14%, #1A0B36 50.28%, rgba(141, 102, 191, 0.88) 86%, rgba(255, 255, 255, 0.80) 100%);
+        z-index: -2;
     }
 
     .close_elem {
@@ -1002,7 +1015,7 @@ html {
 
     .planet {
         position: absolute;
-        bottom: 0;
+        bottom: -20%;
         left: 0;
         width: 100%;
         height: auto;
@@ -1054,15 +1067,15 @@ html {
     &::before {
         content: '';
         position: absolute;
-        top: 0;
+        top: 50%;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translate(-50%, -50%);
         border-radius: 994px;
         opacity: 0.3;
         background: #231848;
         filter: blur(137px);
         width: 69%;
-        height: 87%;
+        height: 50%;
 
         @include media('<phone_max') {
             height: 80%;

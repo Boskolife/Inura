@@ -81,7 +81,7 @@
     }
 
     .burger_menu {
-        // display: none;
+        display: none;
         position: relative;
         width: 20px;
         height: 18px;
@@ -175,7 +175,6 @@
         padding: 30px 15px 30px 15px;
         position: relative;
         overflow: hidden;
-        // border-bottom: 1px solid #AA9FFF;
 
         &::before{
             content: '';
