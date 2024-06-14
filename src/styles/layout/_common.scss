@@ -144,6 +144,144 @@ html {
     --animate-duration: 1s;
 }
 
+.popUp_container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 14;
+}
+
+.app_store_popUp {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 15;
+    border-radius: 20.303px;
+    box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.40);
+    background-color: #231848;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    padding: 50px 25px;
+    max-width: 335px;
+    width: 100%;
+
+    // &::after {
+    //     content: '';
+    //     position: absolute;
+    //     top: 0;
+    //     left: 50%;
+    //     transform: translateX(-50%);
+    //     width: 100%;
+    //     height: 100%;
+    //     border-radius: 19.143px;
+    //     background: linear-gradient(160deg, #4C1E86 -0.23%, #7B4ABA 100%);
+    //     mix-blend-mode: overlay;
+    // }
+
+
+    .close_elem {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+    }
+
+    .tip {
+        text-shadow: 0px 0px 20.25px rgba(212, 185, 255, 0.40);
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 110%;
+        background: linear-gradient(88deg, #C8A6FF 6.17%, #7243BF 105.1%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .popup_title {
+        text-shadow: 0px 0px 4px rgba(234, 221, 255, 0.40);
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 120%;
+        letter-spacing: -0.6px;
+        background: linear-gradient(88deg, #FFF 6.17%, #E5D4F6 105.1%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .popup_text {
+        color: rgba(255, 255, 255, 0.80);
+        text-shadow: 0px 0px 20px rgba(26, 15, 51, 0.70);
+        font-size: 16px;
+        line-height: 140%;
+        letter-spacing: 0.2px;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .input_wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .label_name {
+        color: #FFF;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 166%;
+        text-transform: capitalize;
+        margin-bottom: 5px;
+    }
+
+    .input_popup {
+        color: #fff;
+        font-size: 16px;
+        width: 100%;
+        border-radius: 20px;
+        border: 1px solid #AA86F7;
+        background: rgba(255, 255, 255, 0.06);
+        backdrop-filter: blur(12px);
+        padding: 12px 16px;
+        transition: all .3s ease 0s;
+
+        &:focus {
+            border: 1px solid #fff;
+        }
+
+        &::placeholder {
+            color: rgba(255, 255, 255, 0.80);
+            text-shadow: 0px 0px 20px rgba(26, 15, 51, 0.70);
+            font-size: 16px;
+            line-height: 140%;
+            letter-spacing: 0.2px;
+        }
+    }
+
+    .white_btn {
+        width: 100%;
+        box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.40);
+    }
+
+}
+
+.popUp_active {
+    display: flex;
+}
 
 .main_section {
     position: relative;
@@ -170,6 +308,9 @@ html {
         background: linear-gradient(90deg, rgba(14, 10, 27, 0.00) 0%, #0E0A1B 100%);
         right: 0;
     }
+
+
+
 
     .bottom_shadow {
         position: absolute;
@@ -727,6 +868,14 @@ html {
     .swiper-slide:has(+ .swiper-slide-prev) .slider_img {
         transform: rotateX(20deg) rotateY(25deg) skew(35deg, -25deg) scale(0.75, 0.65) translate(-15%, 35%);
     }
+
+    .btn_swiper {
+        padding: 0;
+
+        .swiper-slide {
+            width: max-content;
+        }
+    }
 }
 
 .hot_it_works {
@@ -1058,7 +1207,6 @@ html {
     padding-bottom: 100px;
     @include adaptive-value("padding-top", 100, 50, 1);
 
-
     .content {
         max-width: 1030px;
         width: 100%;
@@ -1173,4 +1321,41 @@ html {
         line-height: 140%;
         letter-spacing: 0.2px;
     }
+}
+
+.functions_page {
+
+    .card_wrap {
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 283px;
+            opacity: 0.3;
+            background: #231848;
+            filter: blur(80px);
+            max-width: 283px;
+            width: 100%;
+            height: 273px;
+            z-index: -1;
+        }
+    }
+
+    .card_img,
+    .card_text {
+        max-width: 100%;
+    }
+
+    .card_img {
+        @include media('<tablet') {
+            width: auto;
+            height: auto;
+        }
+
+    }
+
 }

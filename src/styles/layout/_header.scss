@@ -177,7 +177,7 @@
         overflow: hidden;
         border-bottom: 1px solid #AA9FFF;
 
-        @include media('<phone_max'){
+        @include media('<phone_max') {
             padding: 30px 0 15px 15px;
         }
     }
@@ -240,11 +240,33 @@
         letter-spacing: 0.2px;
     }
 
-    .hidden_word{
+    .hidden_word {
         display: none;
 
-        @include media('<phone_max'){
+        @include media('<phone_max') {
             display: inline-block;
         }
+    }
+}
+
+.header_functions {
+
+    .page_nav_menu{
+        padding: 30px 15px 15px 15px;
+    }
+
+    .page_nav_menu-list {
+        display: grid;
+        grid-template: 1fr / repeat(6, 1fr);
+    }
+
+    .item_name {
+        @include media('<desktop') {
+            display: none;
+        }
+    }
+
+    .page_nav_menu-item {
+        min-width: 100%;
     }
 }

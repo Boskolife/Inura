@@ -32,6 +32,15 @@ document.addEventListener('DOMContentLoaded', function () {
     },
   });
 
+  const swiperBtn = new Swiper('.btn_swiper', {
+    loop: true,
+    slidesPerView: 1,
+    centeredSlides: true,
+    speed: 0,
+  });
+
+  swiper.controller.control = swiperBtn;
+
   const updateActiveClass = () => {
     const activeIndex = swiper.realIndex;
     featuresItems.forEach((item, index) => {
@@ -120,4 +129,27 @@ function burgerMenu() {
     });
   });
 }
+openPopup();
 
+function openPopup() {
+  const btn = document.querySelectorAll('.app_store_btn');
+  console.log(btn)
+  const popUp = document.querySelector('.app_store_popUp');
+  const popupContainer = document.querySelector('.popUp_container');
+  const closeElem = document.querySelector('.close_elem');
+
+  btn.forEach((item) => {
+    item.addEventListener('click', (e) => {
+      e.preventDefault();
+      popUp.classList.add('popUp_active');
+      popupContainer.style.display = 'block';
+      document.body.classList.add('body_lock');
+    });
+  });
+
+  closeElem.addEventListener('click', () => {
+    popUp.classList.remove('popUp_active');
+    popupContainer.style.display = 'none';
+    document.body.classList.remove('body_lock');
+  });
+}
