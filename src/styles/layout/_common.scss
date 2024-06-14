@@ -23,7 +23,7 @@ html {
     }
 }
 
-.body_lock{
+.body_lock {
     overflow: hidden;
 }
 
@@ -366,7 +366,7 @@ html {
     .star {
         position: absolute;
         animation: shine 5s ease infinite alternate;
-        background-color: #0E0A1B;
+        // background-color: #0E0A1B;
     }
 
     .journey_star_1 {
@@ -579,24 +579,24 @@ html {
         row-gap: 15px;
         position: relative;
 
-        // @include media('<phone_max') {
-        //     &::before {
-        //         content: '';
-        //         position: absolute;
-        //         top: 0;
-        //         left: 0;
-        //         width: 130%;
-        //         height: 100%;
-        //         border-radius: 369px;
-        //         background: #231848;
-        //         filter: blur(137px);
-        //         z-index: -1;
-        //     }
-        // }
+        @include media('<phone_max') {
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 130%;
+                height: 100%;
+                border-radius: 369px;
+                background: #231848;
+                filter: blur(137px);
+                z-index: -1;
+            }
+        }
 
-        // @include media('<phone') {
-        //     flex-direction: column;
-        // }
+        @include media('<phone_max') {
+            flex-direction: column;
+        }
     }
 
     .item_name {
@@ -629,6 +629,7 @@ html {
 
     .features_swiper {
         margin-bottom: 30px;
+
         .swiper-slide-active .slider_img {
             transform: none;
             box-shadow: 0px 0px 25px 0px rgba(141, 117, 255, 0.60);
