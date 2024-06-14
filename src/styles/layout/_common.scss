@@ -23,7 +23,8 @@ html {
     }
 }
 
-.body_lock {
+.body_lock,
+.popup_lock {
     overflow: hidden;
 }
 
@@ -163,9 +164,6 @@ html {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 15;
-    border-radius: 20.303px;
-    box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.40);
-    background-color: #231848;
     flex-direction: column;
     align-items: center;
     gap: 20px;
@@ -173,20 +171,37 @@ html {
     padding: 50px 25px;
     max-width: 335px;
     width: 100%;
+    border-radius: 20px;
+    border: 1px solid rgba(97, 70, 146, 0.50);
+    background: #0E0724;
+    box-shadow: 0px 0px 104px 0px #270058;
+    overflow: hidden;
 
-    // &::after {
-    //     content: '';
-    //     position: absolute;
-    //     top: 0;
-    //     left: 50%;
-    //     transform: translateX(-50%);
-    //     width: 100%;
-    //     height: 100%;
-    //     border-radius: 19.143px;
-    //     background: linear-gradient(160deg, #4C1E86 -0.23%, #7B4ABA 100%);
-    //     mix-blend-mode: overlay;
-    // }
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 98%;
+        height: 98%;
+        border-radius: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.80);
+        box-shadow: 0px 0px 64px 0px rgba(94, 25, 182, 0.20) inset;
+    }
 
+    &::after {
+        content: '';
+        position: absolute;
+        top: -90px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #331664;
+        filter: blur(64.93367004394531px);
+        width: 214px;
+        height: 194px;
+        z-index: -1;
+    }
 
     .close_elem {
         position: absolute;
@@ -309,9 +324,6 @@ html {
         right: 0;
     }
 
-
-
-
     .bottom_shadow {
         position: absolute;
         bottom: 0;
@@ -412,7 +424,7 @@ html {
     }
 
     .zodiac {
-        animation: roll 30s linear infinite;
+        animation: roll 90s linear infinite;
     }
 
     .phone {
@@ -495,7 +507,7 @@ html {
 .journey {
     position: relative;
     overflow: hidden;
-    padding: 220px 0 140px 0;
+    padding: 220px 0 170px 0;
     @include adaptive-value("padding-top", 220, 260, 1);
     z-index: 10;
     margin-top: -70px;
@@ -506,7 +518,7 @@ html {
 
     .star {
         position: absolute;
-        animation: shine 5s ease infinite alternate;
+        animation: shine 4s ease infinite alternate;
         background-color: #0E0A1B;
     }
 
@@ -609,7 +621,7 @@ html {
         top: 0;
         left: 0;
         z-index: -1;
-        animation: moon 5s linear;
+        animation: moon 2.5s linear;
         transform-origin: bottom;
     }
 
@@ -670,23 +682,6 @@ html {
     .content {
         text-align: center;
         position: relative;
-
-        //Мешает работе mis-blend-mode на svg
-
-        // @include media('<phone_max') {
-        //     &::after {
-        //         content: '';
-        //         position: absolute;
-        //         top: 0;
-        //         left: 0;
-        //         width: 100%;
-        //         height: 100%;
-        //         border-radius: 369px;
-        //         background: #231848;
-        //         filter: blur(137px);
-        //         z-index: -1;
-        //     }
-        // }
     }
 
     .tip {
@@ -784,7 +779,7 @@ html {
         .swiper-slide-active .slider_img {
             transform: none;
             box-shadow: 0px 0px 25px 0px rgba(141, 117, 255, 0.60);
-            border-radius: 11.952px;
+            border-radius: 20px;
         }
     }
 
@@ -872,8 +867,8 @@ html {
     .btn_swiper {
         padding: 0;
 
-        .swiper-slide {
-            width: max-content;
+        .swiper-wrapper {
+            transition: none !important;
         }
     }
 }
@@ -1197,7 +1192,7 @@ html {
     }
 
     .planet {
-        animation-duration: 3.5s;
+        animation-duration: 1.3s;
         border-radius: 448.047px;
         box-shadow: -43.081px -39.635px 193.005px 0px rgba(201, 149, 244, 0.20), 0px 0px 206.791px 0px rgba(237, 223, 253, 0.06);
     }

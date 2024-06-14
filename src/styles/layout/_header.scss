@@ -175,7 +175,17 @@
         padding: 30px 15px 30px 15px;
         position: relative;
         overflow: hidden;
-        border-bottom: 1px solid #AA9FFF;
+        // border-bottom: 1px solid #AA9FFF;
+
+        &::before{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, rgba(194, 165, 255, 0.00) 0%, #C2A5FF 51%, rgba(194, 165, 255, 0.00) 100%);
+        }
 
         @include media('<phone_max') {
             padding: 30px 0 15px 15px;

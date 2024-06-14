@@ -1,14 +1,18 @@
 new WOW().init();
 burgerMenu();
+openPopup();
 
 document.addEventListener('DOMContentLoaded', function () {
   const featuresItems = document.querySelectorAll('.item_name');
-
   const swiper = new Swiper('.features_swiper', {
     loop: true,
+    autoplay:true,
+    loopAddBlankSlides:false,
+    loopPreventsSliding:false,
     slidesPerView: 1.7,
     spaceBetween: 10,
     centeredSlides: true,
+    slideToClickedSlide:true,
     speed: 1500,
     grabCursor: true,
     breakpoints: {
@@ -30,13 +34,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
       },
     },
-  });
-
-  const swiperBtn = new Swiper('.btn_swiper', {
-    loop: true,
-    slidesPerView: 1,
-    centeredSlides: true,
-    speed: 0,
   });
 
   swiper.controller.control = swiperBtn;
@@ -67,6 +64,20 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   swiper.on('slideChange', updateActiveClass);
+});
+
+const swiperBtn = new Swiper('.btn_swiper', {
+  loop: true,
+  slidesPerView: 1,
+  centeredSlides: true,
+  speed: 0,
+  effect: 'slide',
+  simulateTouch: false,
+  on: {
+    transitionStart: function () {
+      this.setTransition(0);
+    },
+  },
 });
 
 const swiperCard = new Swiper('.cards_swiper', {
@@ -129,11 +140,10 @@ function burgerMenu() {
     });
   });
 }
-openPopup();
 
 function openPopup() {
   const btn = document.querySelectorAll('.app_store_btn');
-  console.log(btn)
+  console.log(btn);
   const popUp = document.querySelector('.app_store_popUp');
   const popupContainer = document.querySelector('.popUp_container');
   const closeElem = document.querySelector('.close_elem');
@@ -143,13 +153,13 @@ function openPopup() {
       e.preventDefault();
       popUp.classList.add('popUp_active');
       popupContainer.style.display = 'block';
-      document.body.classList.add('body_lock');
+      document.body.classList.add('popup_lock');
     });
   });
 
   closeElem.addEventListener('click', () => {
     popUp.classList.remove('popUp_active');
     popupContainer.style.display = 'none';
-    document.body.classList.remove('body_lock');
+    document.body.classList.remove('popup_lock');
   });
 }
