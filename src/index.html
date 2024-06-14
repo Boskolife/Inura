@@ -6,7 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Inura</title>
   <link rel="stylesheet" href="/styles/main.scss">
+  <link rel="icon" href="./images/favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script type="module" src="/js/main.js" defer></script>
 </head>
@@ -28,8 +31,11 @@
       <div class="container">
         <div class="content">
           <div class="text_content">
-            <h1 class="main_title">Best <span class="fw400">Astrological</span> <br> Mobile App of 2024</h1>
-            <h2 class="subtitle">Stars in the palm of your hand</h2>
+            <h1 class="main_title wow animate__animated animate__fadeIn">Best <span class="fw400">Astrological</span>
+              <br> Mobile App of 2024
+            </h1>
+            <h2 class="subtitle wow animate__animated animate__fadeIn" data-wow-delay="1s">Stars in the palm of your
+              hand</h2>
             <div class="app_btn_wrap">
               <a href="#" target="_blank" class="app_link">
                 <img src="./images/main/App_Store.webp" alt="App Store">
@@ -40,26 +46,170 @@
             </div>
           </div>
           <div class="mockup_wrapper">
-            <img src="./images/main/mockup.png" alt="mockup">
+            <img class="zodiac" src="./images/main/zodiac.webp" alt="zodiac">
+            <img class="phone" src="./images/main/phone.webp" alt="phone">
+            <!-- <img src="./images/main/mockup.png" alt="mockup"> -->
+          </div>
+          <div class="app_btn_wrap phone_wrap">
+            <a href="#" target="_blank" class="app_link">
+              <img src="./images/main/App_Store.webp" alt="App Store">
+            </a>
+            <a href="#" target="_blank" class="app_link">
+              <img src="./images/main/Google_Play.webp" alt="Google Play">
+            </a>
           </div>
         </div>
       </div>
     </section>
     <section class="journey">
+      <svg class="journey_star_1 star" xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44"
+        fill="none">
+        <g style="mix-blend-mode:color-dodge">
+          <rect width="32" height="32" transform="translate(16) rotate(30)" fill="black" />
+          <ellipse cx="22.0657" cy="21.9773" rx="2.2945" ry="16" transform="rotate(30 22.0657 21.9773)"
+            fill="url(#paint0_radial_12166_7419)" />
+          <ellipse cx="21.7351" cy="22.0662" rx="2.2945" ry="16" transform="rotate(-60 21.7351 22.0662)"
+            fill="url(#paint1_radial_12166_7419)" />
+        </g>
+        <defs>
+          <radialGradient id="paint0_radial_12166_7419" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(22.0657 21.9773) rotate(90) scale(16 2.2945)">
+            <stop offset="0.145833" stop-color="white" />
+            <stop offset="1" stop-color="white" stop-opacity="0" />
+          </radialGradient>
+          <radialGradient id="paint1_radial_12166_7419" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(21.7351 22.0662) rotate(90) scale(16 2.2945)">
+            <stop offset="0.145833" stop-color="white" />
+            <stop offset="1" stop-color="white" stop-opacity="0" />
+          </radialGradient>
+        </defs>
+      </svg>
+
+      <svg class="journey_star_2 star" xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44"
+        fill="none">
+        <g style="mix-blend-mode:color-dodge">
+          <rect width="32" height="32" transform="translate(16) rotate(30)" fill="black" />
+          <ellipse cx="22.0657" cy="21.9773" rx="2.2945" ry="16" transform="rotate(30 22.0657 21.9773)"
+            fill="url(#paint0_radial_12166_7419)" />
+          <ellipse cx="21.7351" cy="22.0662" rx="2.2945" ry="16" transform="rotate(-60 21.7351 22.0662)"
+            fill="url(#paint1_radial_12166_7419)" />
+        </g>
+        <defs>
+          <radialGradient id="paint0_radial_12166_7419" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(22.0657 21.9773) rotate(90) scale(16 2.2945)">
+            <stop offset="0.145833" stop-color="white" />
+            <stop offset="1" stop-color="white" stop-opacity="0" />
+          </radialGradient>
+          <radialGradient id="paint1_radial_12166_7419" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(21.7351 22.0662) rotate(90) scale(16 2.2945)">
+            <stop offset="0.145833" stop-color="white" />
+            <stop offset="1" stop-color="white" stop-opacity="0" />
+          </radialGradient>
+        </defs>
+      </svg>
+      <svg class="journey_star_3 star" xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44"
+        fill="none">
+        <g style="mix-blend-mode:color-dodge">
+          <rect width="32" height="32" transform="translate(16) rotate(30)" fill="black" />
+          <ellipse cx="22.0657" cy="21.9773" rx="2.2945" ry="16" transform="rotate(30 22.0657 21.9773)"
+            fill="url(#paint0_radial_12166_7419)" />
+          <ellipse cx="21.7351" cy="22.0662" rx="2.2945" ry="16" transform="rotate(-60 21.7351 22.0662)"
+            fill="url(#paint1_radial_12166_7419)" />
+        </g>
+        <defs>
+          <radialGradient id="paint0_radial_12166_7419" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(22.0657 21.9773) rotate(90) scale(16 2.2945)">
+            <stop offset="0.145833" stop-color="white" />
+            <stop offset="1" stop-color="white" stop-opacity="0" />
+          </radialGradient>
+          <radialGradient id="paint1_radial_12166_7419" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(21.7351 22.0662) rotate(90) scale(16 2.2945)">
+            <stop offset="0.145833" stop-color="white" />
+            <stop offset="1" stop-color="white" stop-opacity="0" />
+          </radialGradient>
+        </defs>
+      </svg>
+      <svg class="journey_star_4 star" xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44"
+        fill="none">
+        <g style="mix-blend-mode:color-dodge">
+          <rect width="32" height="32" transform="translate(16) rotate(30)" fill="black" />
+          <ellipse cx="22.0657" cy="21.9773" rx="2.2945" ry="16" transform="rotate(30 22.0657 21.9773)"
+            fill="url(#paint0_radial_12166_7419)" />
+          <ellipse cx="21.7351" cy="22.0662" rx="2.2945" ry="16" transform="rotate(-60 21.7351 22.0662)"
+            fill="url(#paint1_radial_12166_7419)" />
+        </g>
+        <defs>
+          <radialGradient id="paint0_radial_12166_7419" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(22.0657 21.9773) rotate(90) scale(16 2.2945)">
+            <stop offset="0.145833" stop-color="white" />
+            <stop offset="1" stop-color="white" stop-opacity="0" />
+          </radialGradient>
+          <radialGradient id="paint1_radial_12166_7419" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(21.7351 22.0662) rotate(90) scale(16 2.2945)">
+            <stop offset="0.145833" stop-color="white" />
+            <stop offset="1" stop-color="white" stop-opacity="0" />
+          </radialGradient>
+        </defs>
+      </svg>
+      <svg class="journey_star_5 star" xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44"
+        fill="none">
+        <g style="mix-blend-mode:color-dodge">
+          <rect width="32" height="32" transform="translate(16) rotate(30)" fill="black" />
+          <ellipse cx="22.0657" cy="21.9773" rx="2.2945" ry="16" transform="rotate(30 22.0657 21.9773)"
+            fill="url(#paint0_radial_12166_7419)" />
+          <ellipse cx="21.7351" cy="22.0662" rx="2.2945" ry="16" transform="rotate(-60 21.7351 22.0662)"
+            fill="url(#paint1_radial_12166_7419)" />
+        </g>
+        <defs>
+          <radialGradient id="paint0_radial_12166_7419" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(22.0657 21.9773) rotate(90) scale(16 2.2945)">
+            <stop offset="0.145833" stop-color="white" />
+            <stop offset="1" stop-color="white" stop-opacity="0" />
+          </radialGradient>
+          <radialGradient id="paint1_radial_12166_7419" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(21.7351 22.0662) rotate(90) scale(16 2.2945)">
+            <stop offset="0.145833" stop-color="white" />
+            <stop offset="1" stop-color="white" stop-opacity="0" />
+          </radialGradient>
+        </defs>
+      </svg>
+      <svg class="journey_star_6 star" xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44"
+        fill="none">
+        <g style="mix-blend-mode:color-dodge">
+          <rect width="32" height="32" transform="translate(16) rotate(30)" fill="black" />
+          <ellipse cx="22.0657" cy="21.9773" rx="2.2945" ry="16" transform="rotate(30 22.0657 21.9773)"
+            fill="url(#paint0_radial_12166_7419)" />
+          <ellipse cx="21.7351" cy="22.0662" rx="2.2945" ry="16" transform="rotate(-60 21.7351 22.0662)"
+            fill="url(#paint1_radial_12166_7419)" />
+        </g>
+        <defs>
+          <radialGradient id="paint0_radial_12166_7419" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(22.0657 21.9773) rotate(90) scale(16 2.2945)">
+            <stop offset="0.145833" stop-color="white" />
+            <stop offset="1" stop-color="white" stop-opacity="0" />
+          </radialGradient>
+          <radialGradient id="paint1_radial_12166_7419" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(21.7351 22.0662) rotate(90) scale(16 2.2945)">
+            <stop offset="0.145833" stop-color="white" />
+            <stop offset="1" stop-color="white" stop-opacity="0" />
+          </radialGradient>
+        </defs>
+      </svg>
       <div class="journey_img_wrap">
-        <span class="journey_img_name">STELLAR JOURNEY</span>
-        <div class="journey_img">
+        <span class="journey_img_name wow animate__animated animate__fadeIn">STELLAR JOURNEY</span>
+        <img class="journey_img_1 wow" src="./images/journey_1.webp" alt="journey">
+        <img class="journey_img_2" src="./images/journey_2.webp" alt="journey">
+        <!-- <div class="journey_img">
           <img class="journey_img" src="./images/journey.webp" alt="journey">
-        </div>
+        </div> -->
       </div>
       <div class="container">
         <div class="content">
-          <h2 class="title">
+          <h2 class="title wow animate__animated animate__fadeIn">
             Embark on a journey <span class="white_text">through the stars with Inura</span>, the app that provides
             detailed astrology <span class="white_text">
               detailed astrology predictions and
-              guidance.
-              detailed astrology </span>
+              guidance.</span>
           </h2>
         </div>
       </div>
@@ -67,62 +217,308 @@
     <section class="features" id="features">
       <div class="container">
         <div class="content">
-          <span class="tip">OUR FEATURES</span>
-          <h2 class="features_title">Unlock the <span class="white_text">universe's</span> <br> <span
-              class="white_text">secrets</span> with Inura</h2>
-          <p class="features_text">Unlock the Mysteries of Your Star Sign:</p>
+          <span class="tip wow">OUR FEATURES</span>
+          <h2 class="features_title wow animate__animated animate__fadeIn">Unlock the <span
+              class="white_text wow animate__animated animate__fadeIn" data-wow-delay="2s">universe's</span> <br> <span
+              class="white_text wow animate__animated animate__fadeIn" data-wow-delay="3s">secrets</span> with Inura
+          </h2>
+          <p class="features_text wow animate__animated animate__fadeIn">Unlock the Mysteries of Your Star Sign:</p>
           <ul class="features_list">
-            <li class="features_item">
-              <img class="star" src="./images/star.svg" alt="star">
-              <span class="item_name">Natal Chart</span>
-              <img class="star second_star" src="./images/star.svg" alt="star">
+            <li class="features_item" data-slide="0">
+              <svg class="star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                fill="none">
+                <g style="mix-blend-mode:color-dodge">
+                  <rect width="24" height="24" fill="black" />
+                  <ellipse cx="12.1818" cy="12" rx="1.72668" ry="12" fill="url(#paint0_radial_12166_27198)" />
+                  <ellipse cx="12" cy="12.1824" rx="1.72668" ry="12" transform="rotate(-90 12 12.1824)"
+                    fill="url(#paint1_radial_12166_27198)" />
+                </g>
+                <defs>
+                  <radialGradient id="paint0_radial_12166_27198" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                    gradientTransform="translate(12.1818 12) rotate(90) scale(12 1.72668)">
+                    <stop offset="0.145833" stop-color="white" />
+                    <stop offset="1" stop-color="white" stop-opacity="0" />
+                  </radialGradient>
+                  <radialGradient id="paint1_radial_12166_27198" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                    gradientTransform="translate(12 12.1824) rotate(90) scale(12 1.72668)">
+                    <stop offset="0.145833" stop-color="white" />
+                    <stop offset="1" stop-color="white" stop-opacity="0" />
+                  </radialGradient>
+                </defs>
+              </svg>
+              <span class="item_name wow animate__animated animate__jackInTheBox">Natal Chart</span>
+              <svg class="star second_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none">
+                <g style="mix-blend-mode:color-dodge">
+                  <rect width="24" height="24" fill="black" />
+                  <ellipse cx="12.1818" cy="12" rx="1.72668" ry="12" fill="url(#paint0_radial_12166_27198)" />
+                  <ellipse cx="12" cy="12.1824" rx="1.72668" ry="12" transform="rotate(-90 12 12.1824)"
+                    fill="url(#paint1_radial_12166_27198)" />
+                </g>
+                <defs>
+                  <radialGradient id="paint0_radial_12166_27198" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                    gradientTransform="translate(12.1818 12) rotate(90) scale(12 1.72668)">
+                    <stop offset="0.145833" stop-color="white" />
+                    <stop offset="1" stop-color="white" stop-opacity="0" />
+                  </radialGradient>
+                  <radialGradient id="paint1_radial_12166_27198" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                    gradientTransform="translate(12 12.1824) rotate(90) scale(12 1.72668)">
+                    <stop offset="0.145833" stop-color="white" />
+                    <stop offset="1" stop-color="white" stop-opacity="0" />
+                  </radialGradient>
+                </defs>
+              </svg>
             </li>
-            <li class="features_item">
-              <img class="star" src="./images/star.svg" alt="star">
-              <span class="item_name">Daily Horoscopes</span>
-              <img class="star second_star" src="./images/star.svg" alt="star">
+            <li class="features_item" data-slide="1">
+              <svg class="star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                fill="none">
+                <g style="mix-blend-mode:color-dodge">
+                  <rect width="24" height="24" fill="black" />
+                  <ellipse cx="12.1818" cy="12" rx="1.72668" ry="12" fill="url(#paint0_radial_12166_27198)" />
+                  <ellipse cx="12" cy="12.1824" rx="1.72668" ry="12" transform="rotate(-90 12 12.1824)"
+                    fill="url(#paint1_radial_12166_27198)" />
+                </g>
+                <defs>
+                  <radialGradient id="paint0_radial_12166_27198" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                    gradientTransform="translate(12.1818 12) rotate(90) scale(12 1.72668)">
+                    <stop offset="0.145833" stop-color="white" />
+                    <stop offset="1" stop-color="white" stop-opacity="0" />
+                  </radialGradient>
+                  <radialGradient id="paint1_radial_12166_27198" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                    gradientTransform="translate(12 12.1824) rotate(90) scale(12 1.72668)">
+                    <stop offset="0.145833" stop-color="white" />
+                    <stop offset="1" stop-color="white" stop-opacity="0" />
+                  </radialGradient>
+                </defs>
+              </svg>
+              <span class="item_name wow animate__animated animate__jackInTheBox" data-wow-delay="0.5s">Daily
+                Horoscopes</span>
+              <svg class="star second_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none">
+                <g style="mix-blend-mode:color-dodge">
+                  <rect width="24" height="24" fill="black" />
+                  <ellipse cx="12.1818" cy="12" rx="1.72668" ry="12" fill="url(#paint0_radial_12166_27198)" />
+                  <ellipse cx="12" cy="12.1824" rx="1.72668" ry="12" transform="rotate(-90 12 12.1824)"
+                    fill="url(#paint1_radial_12166_27198)" />
+                </g>
+                <defs>
+                  <radialGradient id="paint0_radial_12166_27198" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                    gradientTransform="translate(12.1818 12) rotate(90) scale(12 1.72668)">
+                    <stop offset="0.145833" stop-color="white" />
+                    <stop offset="1" stop-color="white" stop-opacity="0" />
+                  </radialGradient>
+                  <radialGradient id="paint1_radial_12166_27198" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                    gradientTransform="translate(12 12.1824) rotate(90) scale(12 1.72668)">
+                    <stop offset="0.145833" stop-color="white" />
+                    <stop offset="1" stop-color="white" stop-opacity="0" />
+                  </radialGradient>
+                </defs>
+              </svg>
             </li>
-            <li class="features_item">
-              <img class="star" src="./images/star.svg" alt="star">
-              <span class="item_name">Dreambook</span>
-              <img class="star second_star" src="./images/star.svg" alt="star">
+            <li class="features_item" data-slide="2">
+              <svg class="star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                fill="none">
+                <g style="mix-blend-mode:color-dodge">
+                  <rect width="24" height="24" fill="black" />
+                  <ellipse cx="12.1818" cy="12" rx="1.72668" ry="12" fill="url(#paint0_radial_12166_27198)" />
+                  <ellipse cx="12" cy="12.1824" rx="1.72668" ry="12" transform="rotate(-90 12 12.1824)"
+                    fill="url(#paint1_radial_12166_27198)" />
+                </g>
+                <defs>
+                  <radialGradient id="paint0_radial_12166_27198" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                    gradientTransform="translate(12.1818 12) rotate(90) scale(12 1.72668)">
+                    <stop offset="0.145833" stop-color="white" />
+                    <stop offset="1" stop-color="white" stop-opacity="0" />
+                  </radialGradient>
+                  <radialGradient id="paint1_radial_12166_27198" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                    gradientTransform="translate(12 12.1824) rotate(90) scale(12 1.72668)">
+                    <stop offset="0.145833" stop-color="white" />
+                    <stop offset="1" stop-color="white" stop-opacity="0" />
+                  </radialGradient>
+                </defs>
+              </svg>
+              <span class="item_name wow animate__animated animate__jackInTheBox" data-wow-delay="1s">Dreambook</span>
+              <svg class="star second_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none">
+                <g style="mix-blend-mode:color-dodge">
+                  <rect width="24" height="24" fill="black" />
+                  <ellipse cx="12.1818" cy="12" rx="1.72668" ry="12" fill="url(#paint0_radial_12166_27198)" />
+                  <ellipse cx="12" cy="12.1824" rx="1.72668" ry="12" transform="rotate(-90 12 12.1824)"
+                    fill="url(#paint1_radial_12166_27198)" />
+                </g>
+                <defs>
+                  <radialGradient id="paint0_radial_12166_27198" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                    gradientTransform="translate(12.1818 12) rotate(90) scale(12 1.72668)">
+                    <stop offset="0.145833" stop-color="white" />
+                    <stop offset="1" stop-color="white" stop-opacity="0" />
+                  </radialGradient>
+                  <radialGradient id="paint1_radial_12166_27198" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                    gradientTransform="translate(12 12.1824) rotate(90) scale(12 1.72668)">
+                    <stop offset="0.145833" stop-color="white" />
+                    <stop offset="1" stop-color="white" stop-opacity="0" />
+                  </radialGradient>
+                </defs>
+              </svg>
             </li>
-            <li class="features_item">
-              <img class="star" src="./images/star.svg" alt="star">
-              <span class="item_name">Compatibility</span>
-              <img class="star second_star" src="./images/star.svg" alt="star">
+            <li class="features_item" data-slide="3">
+              <svg class="star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                fill="none">
+                <g style="mix-blend-mode:color-dodge">
+                  <rect width="24" height="24" fill="black" />
+                  <ellipse cx="12.1818" cy="12" rx="1.72668" ry="12" fill="url(#paint0_radial_12166_27198)" />
+                  <ellipse cx="12" cy="12.1824" rx="1.72668" ry="12" transform="rotate(-90 12 12.1824)"
+                    fill="url(#paint1_radial_12166_27198)" />
+                </g>
+                <defs>
+                  <radialGradient id="paint0_radial_12166_27198" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                    gradientTransform="translate(12.1818 12) rotate(90) scale(12 1.72668)">
+                    <stop offset="0.145833" stop-color="white" />
+                    <stop offset="1" stop-color="white" stop-opacity="0" />
+                  </radialGradient>
+                  <radialGradient id="paint1_radial_12166_27198" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                    gradientTransform="translate(12 12.1824) rotate(90) scale(12 1.72668)">
+                    <stop offset="0.145833" stop-color="white" />
+                    <stop offset="1" stop-color="white" stop-opacity="0" />
+                  </radialGradient>
+                </defs>
+              </svg>
+              <span class="item_name wow animate__animated animate__jackInTheBox"
+                data-wow-delay="1.5s">Compatibility</span>
+              <svg class="star second_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none">
+                <g style="mix-blend-mode:color-dodge">
+                  <rect width="24" height="24" fill="black" />
+                  <ellipse cx="12.1818" cy="12" rx="1.72668" ry="12" fill="url(#paint0_radial_12166_27198)" />
+                  <ellipse cx="12" cy="12.1824" rx="1.72668" ry="12" transform="rotate(-90 12 12.1824)"
+                    fill="url(#paint1_radial_12166_27198)" />
+                </g>
+                <defs>
+                  <radialGradient id="paint0_radial_12166_27198" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                    gradientTransform="translate(12.1818 12) rotate(90) scale(12 1.72668)">
+                    <stop offset="0.145833" stop-color="white" />
+                    <stop offset="1" stop-color="white" stop-opacity="0" />
+                  </radialGradient>
+                  <radialGradient id="paint1_radial_12166_27198" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                    gradientTransform="translate(12 12.1824) rotate(90) scale(12 1.72668)">
+                    <stop offset="0.145833" stop-color="white" />
+                    <stop offset="1" stop-color="white" stop-opacity="0" />
+                  </radialGradient>
+                </defs>
+              </svg>
             </li>
-            <li class="features_item">
-              <img class="star" src="./images/star.svg" alt="star">
-              <span class="item_name">Compatibility</span>
-              <img class="star second_star" src="./images/star.svg" alt="star">
+            <li class="features_item" data-slide="4">
+              <svg class="star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                fill="none">
+                <g style="mix-blend-mode:color-dodge">
+                  <rect width="24" height="24" fill="black" />
+                  <ellipse cx="12.1818" cy="12" rx="1.72668" ry="12" fill="url(#paint0_radial_12166_27198)" />
+                  <ellipse cx="12" cy="12.1824" rx="1.72668" ry="12" transform="rotate(-90 12 12.1824)"
+                    fill="url(#paint1_radial_12166_27198)" />
+                </g>
+                <defs>
+                  <radialGradient id="paint0_radial_12166_27198" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                    gradientTransform="translate(12.1818 12) rotate(90) scale(12 1.72668)">
+                    <stop offset="0.145833" stop-color="white" />
+                    <stop offset="1" stop-color="white" stop-opacity="0" />
+                  </radialGradient>
+                  <radialGradient id="paint1_radial_12166_27198" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                    gradientTransform="translate(12 12.1824) rotate(90) scale(12 1.72668)">
+                    <stop offset="0.145833" stop-color="white" />
+                    <stop offset="1" stop-color="white" stop-opacity="0" />
+                  </radialGradient>
+                </defs>
+              </svg>
+              <span class="item_name wow animate__animated animate__jackInTheBox"
+                data-wow-delay="2s">Compatibility</span>
+              <svg class="star second_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none">
+                <g style="mix-blend-mode:color-dodge">
+                  <rect width="24" height="24" fill="black" />
+                  <ellipse cx="12.1818" cy="12" rx="1.72668" ry="12" fill="url(#paint0_radial_12166_27198)" />
+                  <ellipse cx="12" cy="12.1824" rx="1.72668" ry="12" transform="rotate(-90 12 12.1824)"
+                    fill="url(#paint1_radial_12166_27198)" />
+                </g>
+                <defs>
+                  <radialGradient id="paint0_radial_12166_27198" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                    gradientTransform="translate(12.1818 12) rotate(90) scale(12 1.72668)">
+                    <stop offset="0.145833" stop-color="white" />
+                    <stop offset="1" stop-color="white" stop-opacity="0" />
+                  </radialGradient>
+                  <radialGradient id="paint1_radial_12166_27198" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                    gradientTransform="translate(12 12.1824) rotate(90) scale(12 1.72668)">
+                    <stop offset="0.145833" stop-color="white" />
+                    <stop offset="1" stop-color="white" stop-opacity="0" />
+                  </radialGradient>
+                </defs>
+              </svg>
             </li>
-            <li class="features_item">
-              <img class="star" src="./images/star.svg" alt="star">
-              <span class="item_name">Totem Animal</span>
-              <img class="star second_star" src="./images/star.svg" alt="star">
+            <li class="features_item" data-slide="5">
+              <svg class="star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                fill="none">
+                <g style="mix-blend-mode:color-dodge">
+                  <rect width="24" height="24" fill="black" />
+                  <ellipse cx="12.1818" cy="12" rx="1.72668" ry="12" fill="url(#paint0_radial_12166_27198)" />
+                  <ellipse cx="12" cy="12.1824" rx="1.72668" ry="12" transform="rotate(-90 12 12.1824)"
+                    fill="url(#paint1_radial_12166_27198)" />
+                </g>
+                <defs>
+                  <radialGradient id="paint0_radial_12166_27198" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                    gradientTransform="translate(12.1818 12) rotate(90) scale(12 1.72668)">
+                    <stop offset="0.145833" stop-color="white" />
+                    <stop offset="1" stop-color="white" stop-opacity="0" />
+                  </radialGradient>
+                  <radialGradient id="paint1_radial_12166_27198" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                    gradientTransform="translate(12 12.1824) rotate(90) scale(12 1.72668)">
+                    <stop offset="0.145833" stop-color="white" />
+                    <stop offset="1" stop-color="white" stop-opacity="0" />
+                  </radialGradient>
+                </defs>
+              </svg>
+              <span class="item_name wow animate__animated animate__jackInTheBox" data-wow-delay="2.5s">Totem
+                Animal</span>
+              <svg class="star second_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none">
+                <g style="mix-blend-mode:color-dodge">
+                  <rect width="24" height="24" fill="black" />
+                  <ellipse cx="12.1818" cy="12" rx="1.72668" ry="12" fill="url(#paint0_radial_12166_27198)" />
+                  <ellipse cx="12" cy="12.1824" rx="1.72668" ry="12" transform="rotate(-90 12 12.1824)"
+                    fill="url(#paint1_radial_12166_27198)" />
+                </g>
+                <defs>
+                  <radialGradient id="paint0_radial_12166_27198" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                    gradientTransform="translate(12.1818 12) rotate(90) scale(12 1.72668)">
+                    <stop offset="0.145833" stop-color="white" />
+                    <stop offset="1" stop-color="white" stop-opacity="0" />
+                  </radialGradient>
+                  <radialGradient id="paint1_radial_12166_27198" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                    gradientTransform="translate(12 12.1824) rotate(90) scale(12 1.72668)">
+                    <stop offset="0.145833" stop-color="white" />
+                    <stop offset="1" stop-color="white" stop-opacity="0" />
+                  </radialGradient>
+                </defs>
+              </svg>
             </li>
           </ul>
         </div>
       </div>
       <div class="swiper features_swiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
+          <div class="swiper-slide" data-slide="0">
             <img class="slider_img" src="./images/features/card_1.webp" alt="image not found">
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide" data-slide="1">
             <img class="slider_img" src="./images/features/card_2.webp" alt="image not found">
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide" data-slide="2">
             <img class="slider_img" src="./images/features/card_3.webp" alt="image not found">
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide" data-slide="3">
             <img class="slider_img" src="./images/features/card_4.webp" alt="image not found">
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide" data-slide="4">
             <img class="slider_img" src="./images/features/card_5.webp" alt="image not found">
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide" data-slide="5">
             <img class="slider_img" src="./images/features/card_6.webp" alt="image not found">
           </div>
         </div>
@@ -131,71 +527,321 @@
     </section>
     <section class="features hot_it_works" id="hot_it_works">
       <div class="content">
-        <span class="tip">HOW IT WORKS</span>
-        <h2 class="features_title">Centuries of knowledge <br> <span class="white_text">In one app</span></h2>
-        <p class="features_text">At Inura, we blend the wisdom of the <span class="white_text">ten most commonly used
+        <span class="tip wow">HOW IT WORKS</span>
+        <h2 class="features_title wow animate__animated animate__fadeIn">Centuries of knowledge <br> <span
+            class="white_text wow animate__animated animate__fadeIn" data-wow-delay="1s">In one app</span></h2>
+        <p class="features_text wow animate__animated animate__fadeIn" data-wow-delay="1.3s">At Inura, we blend the
+          wisdom of the <span class="white_text">ten most commonly used
             schools of astrology</span> to deliver the most <span class="white_text">customizable</span> and <span
             class="white_text">accurate</span> results, thus offering a <span class="white_text">unique</span> and <span
             class="white_text">comprehensive</span> approach that stands <span class="white_text">unmatched.</span></p>
-            <div class="swiper features_swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <img class="slider_img" src="./images/features/card_1.webp" alt="image not found">
-                </div>
-                <div class="swiper-slide">
-                  <img class="slider_img" src="./images/features/card_2.webp" alt="image not found">
-                </div>
-                <div class="swiper-slide">
-                  <img class="slider_img" src="./images/features/card_3.webp" alt="image not found">
-                </div>
-                <div class="swiper-slide">
-                  <img class="slider_img" src="./images/features/card_4.webp" alt="image not found">
-                </div>
-                <div class="swiper-slide">
-                  <img class="slider_img" src="./images/features/card_5.webp" alt="image not found">
-                </div>
-                <div class="swiper-slide">
-                  <img class="slider_img" src="./images/features/card_6.webp" alt="image not found">
-                </div>
-              </div>
+        <div class="swiper cards_swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img class="slider_img" src="./images/cards/card_1.webp" alt="image not found">
             </div>
+            <div class="swiper-slide">
+              <img class="slider_img" src="./images/cards/card_2.webp" alt="image not found">
+            </div>
+            <div class="swiper-slide">
+              <img class="slider_img" src="./images/cards/card_3.webp" alt="image not found">
+            </div>
+            <div class="swiper-slide">
+              <img class="slider_img" src="./images/cards/card_4.webp" alt="image not found">
+            </div>
+            <div class="swiper-slide">
+              <img class="slider_img" src="./images/cards/card_5.webp" alt="image not found">
+            </div>
+            <div class="swiper-slide">
+              <img class="slider_img" src="./images/cards/card_7.webp" alt="image not found">
+            </div>
+            <div class="swiper-slide">
+              <img class="slider_img" src="./images/cards/card_8.webp" alt="image not found">
+            </div>
+            <div class="swiper-slide">
+              <img class="slider_img" src="./images/cards/card_9.webp" alt="image not found">
+            </div>
+            <div class="swiper-slide">
+              <img class="slider_img" src="./images/cards/card_10.webp" alt="image not found">
+            </div>
+          </div>
+        </div>
         <a href="#" class="white_btn">Read more</a>
       </div>
     </section>
     <section class="features testimonials" id="testimonials">
-      <div class="content">
-        <span class="tip">testimonials</span>
-        <h2 class="features_title">What <sapn class="white_text">Clients</sapn> Are saying</h2>
-        <div class="hot_it_works_img">
-          <img src="./images/works_cards.webp" alt="image not found">
+      <div class="container">
+        <div class="content">
+          <span class="tip wow">testimonials</span>
+          <h2 class="features_title wow animate__animated animate__fadeIn">What <sapn
+              class="white_text wow animate__animated animate__fadeIn" data-wow-delay="1s">Clients</sapn> Are saying
+          </h2>
+          <div class="swiper testimonials_swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img class="slide_img" src="./images/review_card/review_card_1.webp" alt="image not found">
+              </div>
+              <div class="swiper-slide">
+                <img class="slide_img" src="./images/review_card/review_card_2.webp" alt="image not found">
+              </div>
+              <div class="swiper-slide">
+                <img class="slide_img" src="./images/review_card/review_card_3.webp" alt="image not found">
+              </div>
+              <div class="swiper-slide">
+                <img class="slide_img" src="./images/review_card/review_card_4.webp" alt="image not found">
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <a href="#" class="white_btn">Leave a review</a>
         </div>
-        <a href="#" class="white_btn">Leave a review</a>
       </div>
     </section>
     <section class="features language" id="language">
       <picture class="planet">
-        <source srcset="./images/planet_phone.webp" media="(max-width: 480px)" />
+        <source srcset="./images/planet_phone.webp" media="(max-width: 650px)" />
         <img src="./images/planet.webp" alt="planet">
       </picture>
       <div class="content">
-        <span class="tip">International</span>
-        <h2 class="features_title">Across the world <br>
-          Speaking <span class="white_text">4 languages</span></h2>
+        <span class="tip wow">International</span>
+        <h2 class="features_title wow animate__animated animate__fadeIn">Across the world <br>
+          Speaking <span class="white_text wow animate__animated animate__fadeIn" data-wow-delay="1s">4 languages</span>
+        </h2>
         <div class="lang_icons_wrap">
-          <img class="icon" src="./images/icon_1.webp" alt="flag">
-          <img class="icon" src="./images/icon_2.webp" alt="flag">
-          <img class="icon" src="./images/icon_3.webp" alt="flag">
-          <img class="icon" src="./images/icon_4.webp" alt="flag">
+          <img class="icon wow animate__animated animate__zoomIn" data-wow-delay="1.3s" src="./images/icon_1.webp" alt="flag">
+          <img class="icon wow animate__animated animate__zoomIn" data-wow-delay="1.6s" src="./images/icon_2.webp" alt="flag">
+          <img class="icon wow animate__animated animate__zoomIn" data-wow-delay="1.9s" src="./images/icon_3.webp" alt="flag">
+          <img class="icon wow animate__animated animate__zoomIn" data-wow-delay="2.1s" src="./images/icon_4.webp" alt="flag">
         </div>
-        <span class="lang_tip">Missing your language?</span>
-        <a href="#" class="white_btn">Add your language</a>
+        <span class="lang_tip wow animate__animated animate__fadeIn" data-wow-delay="2.5s">Missing your language?</span>
+        <a href="#" class="white_btn wow animate__animated animate__zoomIn" data-wow-delay="3s">Add your language</a>
       </div>
     </section>
     <section class="features app" id="app">
+      <svg class="app_star_1 star" xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44"
+        fill="none">
+        <g style="mix-blend-mode:color-dodge">
+          <rect width="32" height="32" transform="translate(16) rotate(30)" fill="black" />
+          <ellipse cx="22.0657" cy="21.9773" rx="2.2945" ry="16" transform="rotate(30 22.0657 21.9773)"
+            fill="url(#paint0_radial_12166_7419)" />
+          <ellipse cx="21.7351" cy="22.0662" rx="2.2945" ry="16" transform="rotate(-60 21.7351 22.0662)"
+            fill="url(#paint1_radial_12166_7419)" />
+        </g>
+        <defs>
+          <radialGradient id="paint0_radial_12166_7419" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(22.0657 21.9773) rotate(90) scale(16 2.2945)">
+            <stop offset="0.145833" stop-color="white" />
+            <stop offset="1" stop-color="white" stop-opacity="0" />
+          </radialGradient>
+          <radialGradient id="paint1_radial_12166_7419" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(21.7351 22.0662) rotate(90) scale(16 2.2945)">
+            <stop offset="0.145833" stop-color="white" />
+            <stop offset="1" stop-color="white" stop-opacity="0" />
+          </radialGradient>
+        </defs>
+      </svg>
+      <svg class="app_star_2 star" xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44"
+        fill="none">
+        <g style="mix-blend-mode:color-dodge">
+          <rect width="32" height="32" transform="translate(16) rotate(30)" fill="black" />
+          <ellipse cx="22.0657" cy="21.9773" rx="2.2945" ry="16" transform="rotate(30 22.0657 21.9773)"
+            fill="url(#paint0_radial_12166_7419)" />
+          <ellipse cx="21.7351" cy="22.0662" rx="2.2945" ry="16" transform="rotate(-60 21.7351 22.0662)"
+            fill="url(#paint1_radial_12166_7419)" />
+        </g>
+        <defs>
+          <radialGradient id="paint0_radial_12166_7419" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(22.0657 21.9773) rotate(90) scale(16 2.2945)">
+            <stop offset="0.145833" stop-color="white" />
+            <stop offset="1" stop-color="white" stop-opacity="0" />
+          </radialGradient>
+          <radialGradient id="paint1_radial_12166_7419" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(21.7351 22.0662) rotate(90) scale(16 2.2945)">
+            <stop offset="0.145833" stop-color="white" />
+            <stop offset="1" stop-color="white" stop-opacity="0" />
+          </radialGradient>
+        </defs>
+      </svg>
+      <svg class="app_star_3 star" xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44"
+        fill="none">
+        <g style="mix-blend-mode:color-dodge">
+          <rect width="32" height="32" transform="translate(16) rotate(30)" fill="black" />
+          <ellipse cx="22.0657" cy="21.9773" rx="2.2945" ry="16" transform="rotate(30 22.0657 21.9773)"
+            fill="url(#paint0_radial_12166_7419)" />
+          <ellipse cx="21.7351" cy="22.0662" rx="2.2945" ry="16" transform="rotate(-60 21.7351 22.0662)"
+            fill="url(#paint1_radial_12166_7419)" />
+        </g>
+        <defs>
+          <radialGradient id="paint0_radial_12166_7419" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(22.0657 21.9773) rotate(90) scale(16 2.2945)">
+            <stop offset="0.145833" stop-color="white" />
+            <stop offset="1" stop-color="white" stop-opacity="0" />
+          </radialGradient>
+          <radialGradient id="paint1_radial_12166_7419" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(21.7351 22.0662) rotate(90) scale(16 2.2945)">
+            <stop offset="0.145833" stop-color="white" />
+            <stop offset="1" stop-color="white" stop-opacity="0" />
+          </radialGradient>
+        </defs>
+      </svg>
+      <svg class="app_star_4 star" xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44"
+        fill="none">
+        <g style="mix-blend-mode:color-dodge">
+          <rect width="32" height="32" transform="translate(16) rotate(30)" fill="black" />
+          <ellipse cx="22.0657" cy="21.9773" rx="2.2945" ry="16" transform="rotate(30 22.0657 21.9773)"
+            fill="url(#paint0_radial_12166_7419)" />
+          <ellipse cx="21.7351" cy="22.0662" rx="2.2945" ry="16" transform="rotate(-60 21.7351 22.0662)"
+            fill="url(#paint1_radial_12166_7419)" />
+        </g>
+        <defs>
+          <radialGradient id="paint0_radial_12166_7419" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(22.0657 21.9773) rotate(90) scale(16 2.2945)">
+            <stop offset="0.145833" stop-color="white" />
+            <stop offset="1" stop-color="white" stop-opacity="0" />
+          </radialGradient>
+          <radialGradient id="paint1_radial_12166_7419" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(21.7351 22.0662) rotate(90) scale(16 2.2945)">
+            <stop offset="0.145833" stop-color="white" />
+            <stop offset="1" stop-color="white" stop-opacity="0" />
+          </radialGradient>
+        </defs>
+      </svg>
+      <svg class="app_star_5 star" xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44"
+        fill="none">
+        <g style="mix-blend-mode:color-dodge">
+          <rect width="32" height="32" transform="translate(16) rotate(30)" fill="black" />
+          <ellipse cx="22.0657" cy="21.9773" rx="2.2945" ry="16" transform="rotate(30 22.0657 21.9773)"
+            fill="url(#paint0_radial_12166_7419)" />
+          <ellipse cx="21.7351" cy="22.0662" rx="2.2945" ry="16" transform="rotate(-60 21.7351 22.0662)"
+            fill="url(#paint1_radial_12166_7419)" />
+        </g>
+        <defs>
+          <radialGradient id="paint0_radial_12166_7419" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(22.0657 21.9773) rotate(90) scale(16 2.2945)">
+            <stop offset="0.145833" stop-color="white" />
+            <stop offset="1" stop-color="white" stop-opacity="0" />
+          </radialGradient>
+          <radialGradient id="paint1_radial_12166_7419" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(21.7351 22.0662) rotate(90) scale(16 2.2945)">
+            <stop offset="0.145833" stop-color="white" />
+            <stop offset="1" stop-color="white" stop-opacity="0" />
+          </radialGradient>
+        </defs>
+      </svg>
+      <svg class="app_star_6 star" xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44"
+        fill="none">
+        <g style="mix-blend-mode:color-dodge">
+          <rect width="32" height="32" transform="translate(16) rotate(30)" fill="black" />
+          <ellipse cx="22.0657" cy="21.9773" rx="2.2945" ry="16" transform="rotate(30 22.0657 21.9773)"
+            fill="url(#paint0_radial_12166_7419)" />
+          <ellipse cx="21.7351" cy="22.0662" rx="2.2945" ry="16" transform="rotate(-60 21.7351 22.0662)"
+            fill="url(#paint1_radial_12166_7419)" />
+        </g>
+        <defs>
+          <radialGradient id="paint0_radial_12166_7419" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(22.0657 21.9773) rotate(90) scale(16 2.2945)">
+            <stop offset="0.145833" stop-color="white" />
+            <stop offset="1" stop-color="white" stop-opacity="0" />
+          </radialGradient>
+          <radialGradient id="paint1_radial_12166_7419" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(21.7351 22.0662) rotate(90) scale(16 2.2945)">
+            <stop offset="0.145833" stop-color="white" />
+            <stop offset="1" stop-color="white" stop-opacity="0" />
+          </radialGradient>
+        </defs>
+      </svg>
+      <svg class="app_star_7 star" xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44"
+        fill="none">
+        <g style="mix-blend-mode:color-dodge">
+          <rect width="32" height="32" transform="translate(16) rotate(30)" fill="black" />
+          <ellipse cx="22.0657" cy="21.9773" rx="2.2945" ry="16" transform="rotate(30 22.0657 21.9773)"
+            fill="url(#paint0_radial_12166_7419)" />
+          <ellipse cx="21.7351" cy="22.0662" rx="2.2945" ry="16" transform="rotate(-60 21.7351 22.0662)"
+            fill="url(#paint1_radial_12166_7419)" />
+        </g>
+        <defs>
+          <radialGradient id="paint0_radial_12166_7419" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(22.0657 21.9773) rotate(90) scale(16 2.2945)">
+            <stop offset="0.145833" stop-color="white" />
+            <stop offset="1" stop-color="white" stop-opacity="0" />
+          </radialGradient>
+          <radialGradient id="paint1_radial_12166_7419" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(21.7351 22.0662) rotate(90) scale(16 2.2945)">
+            <stop offset="0.145833" stop-color="white" />
+            <stop offset="1" stop-color="white" stop-opacity="0" />
+          </radialGradient>
+        </defs>
+      </svg>
+      <svg class="app_star_8 star" xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44"
+        fill="none">
+        <g style="mix-blend-mode:color-dodge">
+          <rect width="32" height="32" transform="translate(16) rotate(30)" fill="black" />
+          <ellipse cx="22.0657" cy="21.9773" rx="2.2945" ry="16" transform="rotate(30 22.0657 21.9773)"
+            fill="url(#paint0_radial_12166_7419)" />
+          <ellipse cx="21.7351" cy="22.0662" rx="2.2945" ry="16" transform="rotate(-60 21.7351 22.0662)"
+            fill="url(#paint1_radial_12166_7419)" />
+        </g>
+        <defs>
+          <radialGradient id="paint0_radial_12166_7419" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(22.0657 21.9773) rotate(90) scale(16 2.2945)">
+            <stop offset="0.145833" stop-color="white" />
+            <stop offset="1" stop-color="white" stop-opacity="0" />
+          </radialGradient>
+          <radialGradient id="paint1_radial_12166_7419" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(21.7351 22.0662) rotate(90) scale(16 2.2945)">
+            <stop offset="0.145833" stop-color="white" />
+            <stop offset="1" stop-color="white" stop-opacity="0" />
+          </radialGradient>
+        </defs>
+      </svg>
+      <svg class="app_star_9 star" xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44"
+        fill="none">
+        <g style="mix-blend-mode:color-dodge">
+          <rect width="32" height="32" transform="translate(16) rotate(30)" fill="black" />
+          <ellipse cx="22.0657" cy="21.9773" rx="2.2945" ry="16" transform="rotate(30 22.0657 21.9773)"
+            fill="url(#paint0_radial_12166_7419)" />
+          <ellipse cx="21.7351" cy="22.0662" rx="2.2945" ry="16" transform="rotate(-60 21.7351 22.0662)"
+            fill="url(#paint1_radial_12166_7419)" />
+        </g>
+        <defs>
+          <radialGradient id="paint0_radial_12166_7419" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(22.0657 21.9773) rotate(90) scale(16 2.2945)">
+            <stop offset="0.145833" stop-color="white" />
+            <stop offset="1" stop-color="white" stop-opacity="0" />
+          </radialGradient>
+          <radialGradient id="paint1_radial_12166_7419" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(21.7351 22.0662) rotate(90) scale(16 2.2945)">
+            <stop offset="0.145833" stop-color="white" />
+            <stop offset="1" stop-color="white" stop-opacity="0" />
+          </radialGradient>
+        </defs>
+      </svg>
+      <svg class="app_star_10 star" xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44"
+        fill="none">
+        <g style="mix-blend-mode:color-dodge">
+          <rect width="32" height="32" transform="translate(16) rotate(30)" fill="black" />
+          <ellipse cx="22.0657" cy="21.9773" rx="2.2945" ry="16" transform="rotate(30 22.0657 21.9773)"
+            fill="url(#paint0_radial_12166_7419)" />
+          <ellipse cx="21.7351" cy="22.0662" rx="2.2945" ry="16" transform="rotate(-60 21.7351 22.0662)"
+            fill="url(#paint1_radial_12166_7419)" />
+        </g>
+        <defs>
+          <radialGradient id="paint0_radial_12166_7419" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(22.0657 21.9773) rotate(90) scale(16 2.2945)">
+            <stop offset="0.145833" stop-color="white" />
+            <stop offset="1" stop-color="white" stop-opacity="0" />
+          </radialGradient>
+          <radialGradient id="paint1_radial_12166_7419" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(21.7351 22.0662) rotate(90) scale(16 2.2945)">
+            <stop offset="0.145833" stop-color="white" />
+            <stop offset="1" stop-color="white" stop-opacity="0" />
+          </radialGradient>
+        </defs>
+      </svg>
       <div class="container">
         <div class="content">
-          <span class="tip">MOBILE APP</span>
-          <h2 class="features_title">Download <span class="white_text">Our App</span> <br> Right Now</h2>
+          <span class="tip wow">MOBILE APP</span>
+          <h2 class="features_title wow animate__animated animate__fadeIn">Download <span class="white_text wow animate__animated animate__fadeIn" data-wow-delay="1s">Our App</span> <br> Right Now</h2>
           <div class="app_btn_wrap">
             <a href="#" target="_blank" class="app_link">
               <img src="./images/main/App_Store.webp" alt="App Store">
@@ -205,8 +851,8 @@
             </a>
           </div>
           <div class="app_img_wrap">
-            <img class="mockup" src="./images/app_mob.webp" alt="mockup">
-            <img class="planet" src="./images/app_planet.webp" alt="planet">
+            <img class="mockup wow animate__animated animate__flipInY" data-wow-delay="4s" src="./images/app_mob.webp" alt="mockup">
+            <img class="planet wow animate__animated animate__zoomIn" src="./images/app_planet.webp" alt="planet">
           </div>
         </div>
       </div>
