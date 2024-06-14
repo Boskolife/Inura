@@ -579,24 +579,24 @@ html {
         row-gap: 15px;
         position: relative;
 
-        @include media('<phone_max') {
-            &::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 130%;
-                height: 100%;
-                border-radius: 369px;
-                background: #231848;
-                filter: blur(137px);
-                z-index: -1;
-            }
-        }
+        // @include media('<phone_max') {
+        //     &::before {
+        //         content: '';
+        //         position: absolute;
+        //         top: 0;
+        //         left: 0;
+        //         width: 130%;
+        //         height: 100%;
+        //         border-radius: 369px;
+        //         background: #231848;
+        //         filter: blur(137px);
+        //         z-index: -1;
+        //     }
+        // }
 
-        @include media('<phone') {
-            flex-direction: column;
-        }
+        // @include media('<phone') {
+        //     flex-direction: column;
+        // }
     }
 
     .item_name {
@@ -609,9 +609,9 @@ html {
         letter-spacing: 0.2px;
     }
 
-    .star{
-          background-color: #0E0A1B;
-    }
+    // .star{
+    //       background-color: #0E0A1B;
+    // }
 
     .second_star {
         display: none;
