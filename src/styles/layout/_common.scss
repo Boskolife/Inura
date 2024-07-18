@@ -1572,7 +1572,7 @@ html {
 
     .name {
         text-align: center;
-        font-feature-settings: 'clig' off, 'liga' off;
+        font-feature-settings: 'clig'off, 'liga'off;
         text-shadow: 0px 0px 3px rgba(194, 165, 255, 0.10);
         @include adaptive-value("font-size", 28, 14, 1);
         font-weight: 500;
@@ -1679,7 +1679,7 @@ html {
 
     .card_title {
         color: #FFF;
-        font-feature-settings: 'clig' off, 'liga' off;
+        font-feature-settings: 'clig'off, 'liga'off;
         text-shadow: 0px 0px 7.217px rgba(194, 165, 255, 0.10);
         font-size: 24px;
         font-weight: 500;
@@ -1882,23 +1882,26 @@ html {
 
             .lottery_content {
                 position: relative;
-                min-height: 404px;
+                height: auto;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 gap: 36px;
                 margin: 5px;
                 border-radius: 15px;
-                border: 1px solid rgba(255, 255, 255, 0.80);
+                border: 1px solid #AA86F7;
                 background: #0E0724;
                 box-shadow: 0px 0px 64px 0px rgba(94, 25, 182, 0.20) inset;
                 text-align: center;
                 position: relative;
-                padding: 36px;
+                @include adaptive-value("padding-top", 36, 20, 1);
+                @include adaptive-value("padding-bottom", 36, 20, 1);
+                @include adaptive-value("padding-right", 36, 20, 1);
+                @include adaptive-value("padding-left", 36, 20, 1);
 
                 h3 {
                     text-align: center;
-                    font-size: 48px;
+                    @include adaptive-value("font-size", 48, 30, 1);
                     font-style: normal;
                     font-weight: 500;
                     line-height: 120%;
@@ -1910,7 +1913,6 @@ html {
 
                     span {
                         text-align: center;
-                        font-size: 48px;
                         font-style: normal;
                         font-weight: 400;
                         line-height: 120%;
@@ -1918,15 +1920,14 @@ html {
                     }
                 }
 
-
                 .lottery_instruction {
                     max-width: 670px;
                     width: 100%;
                     margin-top: 6px;
                     color: rgba(255, 255, 255, 0.80);
                     text-align: center;
-                    font-feature-settings: 'clig' off, 'liga' off;
-                    font-size: 24px;
+                    font-feature-settings: 'clig'off, 'liga'off;
+                    @include adaptive-value("font-size", 24, 16, 1);
                     font-style: normal;
                     font-weight: 400;
                     line-height: normal;
@@ -1935,9 +1936,9 @@ html {
                 .lottery_subtitle {
                     color: var(--White-White-100, var(--Colors-Base-white, #FFF));
                     text-align: center;
-                    font-feature-settings: 'clig' off, 'liga' off;
+                    font-feature-settings: 'clig'off, 'liga'off;
                     text-shadow: 0px 0px 7.217px rgba(194, 165, 255, 0.10);
-                    font-size: 24px;
+                    @include adaptive-value("font-size", 24, 16, 1);
                     font-style: normal;
                     font-weight: 500;
                     line-height: 140%;
@@ -1947,8 +1948,7 @@ html {
                         background-clip: text;
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;
-                        font-feature-settings: 'clig' off, 'liga' off;
-                        font-size: 24px;
+                        font-feature-settings: 'clig'off, 'liga'off;
                         font-style: normal;
                         font-weight: 500;
                         line-height: 140%;
@@ -1958,6 +1958,9 @@ html {
                 .lottery_cat {
                     position: absolute;
                     bottom: 0;
+                    width: 500px;
+                    height: 260px;
+                    object-fit: cover;
                 }
 
                 .lottery_input_wrap {
@@ -1965,12 +1968,16 @@ html {
                     flex-direction: column;
                     align-items: center;
                     gap: 4px;
+                    max-width: 320px;
+                    width: 100%;
+                    margin: 0 auto;
 
                     .lottery_input_container {
                         display: flex;
                         flex-direction: column;
                         align-items: start;
                         gap: 4px;
+                        width: 100%;
                     }
 
                     .lottery_label_name {
@@ -1984,7 +1991,7 @@ html {
 
                     .lottery_input {
                         border-radius: 20px;
-                        border: 1px solid rgba(0, 0, 0, 0);
+                        border: 1px solid #AA86F7;
                         background: rgba(255, 255, 255, 0.06);
                         backdrop-filter: blur(12px);
                         padding: 13px 16px;
@@ -1998,7 +2005,6 @@ html {
                         }
 
                     }
-
                 }
 
                 .white_btn {
@@ -2030,6 +2036,7 @@ html {
 
             #lottery_step_two {
                 display: none;
+                height: 400px;
             }
         }
     }
