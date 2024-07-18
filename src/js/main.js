@@ -3,6 +3,7 @@ burgerMenu();
 openPopup();
 timer();
 initTabs();
+getUserInfo();
 
 document.addEventListener('DOMContentLoaded', function () {
   const featuresItems = document.querySelectorAll('.item_name');
@@ -114,6 +115,30 @@ if (window.innerWidth < 1024) {
       },
     });
   }
+}
+
+function getUserInfo() {
+  const lotterySubmitButton = document.querySelector('#lottery_button_send');
+
+  lotterySubmitButton.addEventListener('click', async () => {
+    const userEmail = document.querySelector('.lottery_input').value;
+    if (!userEmail) {
+      return;
+    }
+
+    const response = await fetch(`/api/Admin/User/GetUserLottoInfo?email=${userEmail}`);
+    const json = await response.json();
+
+    const lotteryStepOne = document.getElementById("lottery_step_one");
+    const lotteryStepTwo = document.getElementById("lottery_step_two");
+
+    lotteryStepOne.style.display = "none";
+    lotteryStepTwo.style.display = "flex"
+
+    document.getElementById("lottery_card_title").textContent = `Hi, ${json.name ?? "Stranger"}!`;
+    document.getElementById("lottery_card_users").textContent = `${json.invitedUsersCount ?? 0}`;
+    document.getElementById("lottery_card_chances").textContent = `${json.shances ?? 0}x`;
+  });
 }
 
 function burgerMenu() {
