@@ -1,0 +1,576 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inura</title>
+    <link rel="stylesheet" href="/styles/main.scss">
+    <link rel="icon" href="./images/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" src="/js/main.js" defer></script>
+</head>
+
+<body>
+    {{> header }}
+    <main>
+        <section class="lottery_main">
+            <img src="./images/lottery/lottery_main_bg.webp" alt="image not found" class="lottery_main_bg">
+            <div class="container">
+                <div class="content">
+                    <h1 class="lottery_title wow animate__animated animate__fadeIn">Win brand new Galaxy S24 Ultra with
+                        Inura
+                    </h1>
+                    <p class="lottery_main_descr lottery_descr wow animate__animated animate__fadeIn">Download our app
+                        invite 3 friends and get a chance to
+                        win big!</p>
+                    <div class="app_btn_wrap">
+                        <a href="#" target="_blank" class="app_link app_store_btn">
+                            <img src="./images/main/App_Store.webp" alt="App Store">
+                        </a>
+                        <a href="#" target="_blank" class="app_link">
+                            <img src="./images/main/Google_Play.webp" alt="Google Play">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="lottery_countdown">
+            <div class="container">
+                <div class="content">
+                    <h2 class="lottery_title wow animate__animated animate__fadeIn">Draw ends in:</h2>
+                    <div class="countdown_items">
+                        <img src="./images/lottery/dots_stars.webp" alt="stars" class="stars">
+                        <div class="countdown_items_numbers_wrap">
+                            <div class="number_wrap">
+                                <div class="number_body">
+                                    <span class="number" id="months_number">2</span>
+                                </div>
+                                <span class="name">months</span>
+                            </div>
+                            <div class="dots_wrap">
+                                <img class="dot" src="./images/lottery/dot.svg" alt="dot">
+                                <img class="dot" src="./images/lottery/dot.svg" alt="dot">
+                            </div>
+                            <div class="number_wrap">
+                                <div class="number_body">
+                                    <span class="number" id="days_number">2</span>
+                                </div>
+                                <span class="name">days</span>
+                            </div>
+                            <div class="dots_wrap">
+                                <img class="dot" src="./images/lottery/dot.svg" alt="dot">
+                                <img class="dot" src="./images/lottery/dot.svg" alt="dot">
+                            </div>
+                            <div class="number_wrap">
+                                <div class="number_body">
+                                    <span class="number" id="hours_number">21</span>
+                                </div>
+                                <span class="name">hours</span>
+                            </div>
+                            <div class="dots_wrap">
+                                <img class="dot" src="./images/lottery/dot.svg" alt="dot">
+                                <img class="dot" src="./images/lottery/dot.svg" alt="dot">
+                            </div>
+                            <div class="number_wrap">
+                                <div class="number_body">
+                                    <span class="number" id="minutes_number">2</span>
+                                </div>
+                                <span class="name">minutes</span>
+                            </div>
+                            <div class="dots_wrap">
+                                <img class="dot" src="./images/lottery/dot.svg" alt="dot">
+                                <img class="dot" src="./images/lottery/dot.svg" alt="dot">
+                            </div>
+                            <div class="number_wrap">
+                                <div class="number_body">
+                                    <span class="number" id="seconds_number">2</span>
+                                </div>
+                                <span class="name">seconds</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="lottery_works">
+            <div class="container">
+                <h2 class="lottery_title wow animate__animated animate__fadeIn">How It works</h2>
+                <div class="cards_wrap">
+                    <div class="card_wrap">
+                        <div class="shine_left"></div>
+                        <div class="shine_right"></div>
+                        <div class="card">
+                            <span class="step">step 1</span>
+                            <h2 class="card_title">Download the Inura App and Create Your Account</h2>
+                            <img src="./images/lottery/card_img_1.webp" alt="image not found" class="card_img">
+                        </div>
+                    </div>
+                    <img src="./images/lottery/line.svg" alt="image not found" class="line">
+                    <div class="card_wrap">
+                        <div class="shine_left"></div>
+                        <div class="shine_right"></div>
+                        <div class="card">
+                            <span class="step">step 2</span>
+                            <h2 class="card_title">Invite 3 Friends Using Your Unique Referral Code</h2>
+                            <img src="./images/lottery/card_img_2.webp" alt="image not found" class="card_img">
+                        </div>
+                    </div>
+                    <img src="./images/lottery/line.svg" alt="image not found" class="line">
+                    <div class="card_wrap">
+                        <div class="shine_left"></div>
+                        <div class="shine_right"></div>
+                        <div class="card">
+                            <span class="step">step 3</span>
+                            <h2 class="card_title">When Your Friends Sign Up, You’re Entered to Win</h2>
+                            <img src="./images/lottery/card_img_3.webp" alt="image not found" class="card_img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="lottery_prizes">
+            <div class="container">
+                <div class="content">
+                    <h1 class="lottery_title">Amazing Prizes Up for Grabs!</h1>
+                    <p class="lottery_prizes_descr lottery_descr">Be the lucky winner of the latest Galaxy S24 Ultra.
+                        Plus, many more exciting prizes!</p>
+                </div>
+            </div>
+            <img src="./images/lottery/lottery_prizes_bg.webp" alt="image not found" class="lottery_prizes_bg">
+        </section>
+        <section class="lottery_secrets features">
+            <div class="container">
+                <div class="content">
+                    <h2 class="features_title wow animate__animated animate__fadeIn">Unlock the <span
+                            class="white_text wow animate__animated animate__fadeIn"
+                            data-wow-delay="2s">universe's</span> <br> <span
+                            class="white_text wow animate__animated animate__fadeIn" data-wow-delay="3s">secrets</span>
+                        with Inura
+                    </h2>
+                    <p class="features_text wow animate__animated animate__fadeIn">Unlock the Mysteries of Your Star
+                        Sign:</p>
+                    <ul class="features_list">
+                        <li class="features_item" data-slide="0">
+                            <svg class="star" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none">
+                                <g style="mix-blend-mode:color-dodge">
+                                    <rect width="24" height="24" fill="black" />
+                                    <ellipse cx="12.1818" cy="12" rx="1.72668" ry="12"
+                                        fill="url(#paint0_radial_12166_27198)" />
+                                    <ellipse cx="12" cy="12.1824" rx="1.72668" ry="12"
+                                        transform="rotate(-90 12 12.1824)" fill="url(#paint1_radial_12166_27198)" />
+                                </g>
+                                <defs>
+                                    <radialGradient id="paint0_radial_12166_27198" cx="0" cy="0" r="1"
+                                        gradientUnits="userSpaceOnUse"
+                                        gradientTransform="translate(12.1818 12) rotate(90) scale(12 1.72668)">
+                                        <stop offset="0.145833" stop-color="white" />
+                                        <stop offset="1" stop-color="white" stop-opacity="0" />
+                                    </radialGradient>
+                                    <radialGradient id="paint1_radial_12166_27198" cx="0" cy="0" r="1"
+                                        gradientUnits="userSpaceOnUse"
+                                        gradientTransform="translate(12 12.1824) rotate(90) scale(12 1.72668)">
+                                        <stop offset="0.145833" stop-color="white" />
+                                        <stop offset="1" stop-color="white" stop-opacity="0" />
+                                    </radialGradient>
+                                </defs>
+                            </svg>
+                            <span class="item_name wow animate__animated animate__jackInTheBox">Daily Prediction</span>
+                            <svg class="star second_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none">
+                                <g style="mix-blend-mode:color-dodge">
+                                    <rect width="24" height="24" fill="black" />
+                                    <ellipse cx="12.1818" cy="12" rx="1.72668" ry="12"
+                                        fill="url(#paint0_radial_12166_27198)" />
+                                    <ellipse cx="12" cy="12.1824" rx="1.72668" ry="12"
+                                        transform="rotate(-90 12 12.1824)" fill="url(#paint1_radial_12166_27198)" />
+                                </g>
+                                <defs>
+                                    <radialGradient id="paint0_radial_12166_27198" cx="0" cy="0" r="1"
+                                        gradientUnits="userSpaceOnUse"
+                                        gradientTransform="translate(12.1818 12) rotate(90) scale(12 1.72668)">
+                                        <stop offset="0.145833" stop-color="white" />
+                                        <stop offset="1" stop-color="white" stop-opacity="0" />
+                                    </radialGradient>
+                                    <radialGradient id="paint1_radial_12166_27198" cx="0" cy="0" r="1"
+                                        gradientUnits="userSpaceOnUse"
+                                        gradientTransform="translate(12 12.1824) rotate(90) scale(12 1.72668)">
+                                        <stop offset="0.145833" stop-color="white" />
+                                        <stop offset="1" stop-color="white" stop-opacity="0" />
+                                    </radialGradient>
+                                </defs>
+                            </svg>
+                        </li>
+                        <li class="features_item" data-slide="1">
+                            <svg class="star" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none">
+                                <g style="mix-blend-mode:color-dodge">
+                                    <rect width="24" height="24" fill="black" />
+                                    <ellipse cx="12.1818" cy="12" rx="1.72668" ry="12"
+                                        fill="url(#paint0_radial_12166_27198)" />
+                                    <ellipse cx="12" cy="12.1824" rx="1.72668" ry="12"
+                                        transform="rotate(-90 12 12.1824)" fill="url(#paint1_radial_12166_27198)" />
+                                </g>
+                                <defs>
+                                    <radialGradient id="paint0_radial_12166_27198" cx="0" cy="0" r="1"
+                                        gradientUnits="userSpaceOnUse"
+                                        gradientTransform="translate(12.1818 12) rotate(90) scale(12 1.72668)">
+                                        <stop offset="0.145833" stop-color="white" />
+                                        <stop offset="1" stop-color="white" stop-opacity="0" />
+                                    </radialGradient>
+                                    <radialGradient id="paint1_radial_12166_27198" cx="0" cy="0" r="1"
+                                        gradientUnits="userSpaceOnUse"
+                                        gradientTransform="translate(12 12.1824) rotate(90) scale(12 1.72668)">
+                                        <stop offset="0.145833" stop-color="white" />
+                                        <stop offset="1" stop-color="white" stop-opacity="0" />
+                                    </radialGradient>
+                                </defs>
+                            </svg>
+                            <span class="item_name wow animate__animated animate__jackInTheBox"
+                                data-wow-delay="0.5s">Prediction
+                                Chat</span>
+                            <svg class="star second_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none">
+                                <g style="mix-blend-mode:color-dodge">
+                                    <rect width="24" height="24" fill="black" />
+                                    <ellipse cx="12.1818" cy="12" rx="1.72668" ry="12"
+                                        fill="url(#paint0_radial_12166_27198)" />
+                                    <ellipse cx="12" cy="12.1824" rx="1.72668" ry="12"
+                                        transform="rotate(-90 12 12.1824)" fill="url(#paint1_radial_12166_27198)" />
+                                </g>
+                                <defs>
+                                    <radialGradient id="paint0_radial_12166_27198" cx="0" cy="0" r="1"
+                                        gradientUnits="userSpaceOnUse"
+                                        gradientTransform="translate(12.1818 12) rotate(90) scale(12 1.72668)">
+                                        <stop offset="0.145833" stop-color="white" />
+                                        <stop offset="1" stop-color="white" stop-opacity="0" />
+                                    </radialGradient>
+                                    <radialGradient id="paint1_radial_12166_27198" cx="0" cy="0" r="1"
+                                        gradientUnits="userSpaceOnUse"
+                                        gradientTransform="translate(12 12.1824) rotate(90) scale(12 1.72668)">
+                                        <stop offset="0.145833" stop-color="white" />
+                                        <stop offset="1" stop-color="white" stop-opacity="0" />
+                                    </radialGradient>
+                                </defs>
+                            </svg>
+                        </li>
+                        <li class="features_item" data-slide="2">
+                            <svg class="star" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none">
+                                <g style="mix-blend-mode:color-dodge">
+                                    <rect width="24" height="24" fill="black" />
+                                    <ellipse cx="12.1818" cy="12" rx="1.72668" ry="12"
+                                        fill="url(#paint0_radial_12166_27198)" />
+                                    <ellipse cx="12" cy="12.1824" rx="1.72668" ry="12"
+                                        transform="rotate(-90 12 12.1824)" fill="url(#paint1_radial_12166_27198)" />
+                                </g>
+                                <defs>
+                                    <radialGradient id="paint0_radial_12166_27198" cx="0" cy="0" r="1"
+                                        gradientUnits="userSpaceOnUse"
+                                        gradientTransform="translate(12.1818 12) rotate(90) scale(12 1.72668)">
+                                        <stop offset="0.145833" stop-color="white" />
+                                        <stop offset="1" stop-color="white" stop-opacity="0" />
+                                    </radialGradient>
+                                    <radialGradient id="paint1_radial_12166_27198" cx="0" cy="0" r="1"
+                                        gradientUnits="userSpaceOnUse"
+                                        gradientTransform="translate(12 12.1824) rotate(90) scale(12 1.72668)">
+                                        <stop offset="0.145833" stop-color="white" />
+                                        <stop offset="1" stop-color="white" stop-opacity="0" />
+                                    </radialGradient>
+                                </defs>
+                            </svg>
+                            <span class="item_name wow animate__animated animate__jackInTheBox"
+                                data-wow-delay="1s">Natal Chart</span>
+                            <svg class="star second_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none">
+                                <g style="mix-blend-mode:color-dodge">
+                                    <rect width="24" height="24" fill="black" />
+                                    <ellipse cx="12.1818" cy="12" rx="1.72668" ry="12"
+                                        fill="url(#paint0_radial_12166_27198)" />
+                                    <ellipse cx="12" cy="12.1824" rx="1.72668" ry="12"
+                                        transform="rotate(-90 12 12.1824)" fill="url(#paint1_radial_12166_27198)" />
+                                </g>
+                                <defs>
+                                    <radialGradient id="paint0_radial_12166_27198" cx="0" cy="0" r="1"
+                                        gradientUnits="userSpaceOnUse"
+                                        gradientTransform="translate(12.1818 12) rotate(90) scale(12 1.72668)">
+                                        <stop offset="0.145833" stop-color="white" />
+                                        <stop offset="1" stop-color="white" stop-opacity="0" />
+                                    </radialGradient>
+                                    <radialGradient id="paint1_radial_12166_27198" cx="0" cy="0" r="1"
+                                        gradientUnits="userSpaceOnUse"
+                                        gradientTransform="translate(12 12.1824) rotate(90) scale(12 1.72668)">
+                                        <stop offset="0.145833" stop-color="white" />
+                                        <stop offset="1" stop-color="white" stop-opacity="0" />
+                                    </radialGradient>
+                                </defs>
+                            </svg>
+                        </li>
+                        <li class="features_item" data-slide="3">
+                            <svg class="star" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none">
+                                <g style="mix-blend-mode:color-dodge">
+                                    <rect width="24" height="24" fill="black" />
+                                    <ellipse cx="12.1818" cy="12" rx="1.72668" ry="12"
+                                        fill="url(#paint0_radial_12166_27198)" />
+                                    <ellipse cx="12" cy="12.1824" rx="1.72668" ry="12"
+                                        transform="rotate(-90 12 12.1824)" fill="url(#paint1_radial_12166_27198)" />
+                                </g>
+                                <defs>
+                                    <radialGradient id="paint0_radial_12166_27198" cx="0" cy="0" r="1"
+                                        gradientUnits="userSpaceOnUse"
+                                        gradientTransform="translate(12.1818 12) rotate(90) scale(12 1.72668)">
+                                        <stop offset="0.145833" stop-color="white" />
+                                        <stop offset="1" stop-color="white" stop-opacity="0" />
+                                    </radialGradient>
+                                    <radialGradient id="paint1_radial_12166_27198" cx="0" cy="0" r="1"
+                                        gradientUnits="userSpaceOnUse"
+                                        gradientTransform="translate(12 12.1824) rotate(90) scale(12 1.72668)">
+                                        <stop offset="0.145833" stop-color="white" />
+                                        <stop offset="1" stop-color="white" stop-opacity="0" />
+                                    </radialGradient>
+                                </defs>
+                            </svg>
+                            <span class="item_name wow animate__animated animate__jackInTheBox"
+                                data-wow-delay="1.5s">Dreambook</span>
+                            <svg class="star second_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none">
+                                <g style="mix-blend-mode:color-dodge">
+                                    <rect width="24" height="24" fill="black" />
+                                    <ellipse cx="12.1818" cy="12" rx="1.72668" ry="12"
+                                        fill="url(#paint0_radial_12166_27198)" />
+                                    <ellipse cx="12" cy="12.1824" rx="1.72668" ry="12"
+                                        transform="rotate(-90 12 12.1824)" fill="url(#paint1_radial_12166_27198)" />
+                                </g>
+                                <defs>
+                                    <radialGradient id="paint0_radial_12166_27198" cx="0" cy="0" r="1"
+                                        gradientUnits="userSpaceOnUse"
+                                        gradientTransform="translate(12.1818 12) rotate(90) scale(12 1.72668)">
+                                        <stop offset="0.145833" stop-color="white" />
+                                        <stop offset="1" stop-color="white" stop-opacity="0" />
+                                    </radialGradient>
+                                    <radialGradient id="paint1_radial_12166_27198" cx="0" cy="0" r="1"
+                                        gradientUnits="userSpaceOnUse"
+                                        gradientTransform="translate(12 12.1824) rotate(90) scale(12 1.72668)">
+                                        <stop offset="0.145833" stop-color="white" />
+                                        <stop offset="1" stop-color="white" stop-opacity="0" />
+                                    </radialGradient>
+                                </defs>
+                            </svg>
+                        </li>
+                        <li class="features_item" data-slide="4">
+                            <svg class="star" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none">
+                                <g style="mix-blend-mode:color-dodge">
+                                    <rect width="24" height="24" fill="black" />
+                                    <ellipse cx="12.1818" cy="12" rx="1.72668" ry="12"
+                                        fill="url(#paint0_radial_12166_27198)" />
+                                    <ellipse cx="12" cy="12.1824" rx="1.72668" ry="12"
+                                        transform="rotate(-90 12 12.1824)" fill="url(#paint1_radial_12166_27198)" />
+                                </g>
+                                <defs>
+                                    <radialGradient id="paint0_radial_12166_27198" cx="0" cy="0" r="1"
+                                        gradientUnits="userSpaceOnUse"
+                                        gradientTransform="translate(12.1818 12) rotate(90) scale(12 1.72668)">
+                                        <stop offset="0.145833" stop-color="white" />
+                                        <stop offset="1" stop-color="white" stop-opacity="0" />
+                                    </radialGradient>
+                                    <radialGradient id="paint1_radial_12166_27198" cx="0" cy="0" r="1"
+                                        gradientUnits="userSpaceOnUse"
+                                        gradientTransform="translate(12 12.1824) rotate(90) scale(12 1.72668)">
+                                        <stop offset="0.145833" stop-color="white" />
+                                        <stop offset="1" stop-color="white" stop-opacity="0" />
+                                    </radialGradient>
+                                </defs>
+                            </svg>
+                            <span class="item_name wow animate__animated animate__jackInTheBox"
+                                data-wow-delay="2s">Compatibility</span>
+                            <svg class="star second_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none">
+                                <g style="mix-blend-mode:color-dodge">
+                                    <rect width="24" height="24" fill="black" />
+                                    <ellipse cx="12.1818" cy="12" rx="1.72668" ry="12"
+                                        fill="url(#paint0_radial_12166_27198)" />
+                                    <ellipse cx="12" cy="12.1824" rx="1.72668" ry="12"
+                                        transform="rotate(-90 12 12.1824)" fill="url(#paint1_radial_12166_27198)" />
+                                </g>
+                                <defs>
+                                    <radialGradient id="paint0_radial_12166_27198" cx="0" cy="0" r="1"
+                                        gradientUnits="userSpaceOnUse"
+                                        gradientTransform="translate(12.1818 12) rotate(90) scale(12 1.72668)">
+                                        <stop offset="0.145833" stop-color="white" />
+                                        <stop offset="1" stop-color="white" stop-opacity="0" />
+                                    </radialGradient>
+                                    <radialGradient id="paint1_radial_12166_27198" cx="0" cy="0" r="1"
+                                        gradientUnits="userSpaceOnUse"
+                                        gradientTransform="translate(12 12.1824) rotate(90) scale(12 1.72668)">
+                                        <stop offset="0.145833" stop-color="white" />
+                                        <stop offset="1" stop-color="white" stop-opacity="0" />
+                                    </radialGradient>
+                                </defs>
+                            </svg>
+                        </li>
+                        <li class="features_item" data-slide="5">
+                            <svg class="star" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none">
+                                <g style="mix-blend-mode:color-dodge">
+                                    <rect width="24" height="24" fill="black" />
+                                    <ellipse cx="12.1818" cy="12" rx="1.72668" ry="12"
+                                        fill="url(#paint0_radial_12166_27198)" />
+                                    <ellipse cx="12" cy="12.1824" rx="1.72668" ry="12"
+                                        transform="rotate(-90 12 12.1824)" fill="url(#paint1_radial_12166_27198)" />
+                                </g>
+                                <defs>
+                                    <radialGradient id="paint0_radial_12166_27198" cx="0" cy="0" r="1"
+                                        gradientUnits="userSpaceOnUse"
+                                        gradientTransform="translate(12.1818 12) rotate(90) scale(12 1.72668)">
+                                        <stop offset="0.145833" stop-color="white" />
+                                        <stop offset="1" stop-color="white" stop-opacity="0" />
+                                    </radialGradient>
+                                    <radialGradient id="paint1_radial_12166_27198" cx="0" cy="0" r="1"
+                                        gradientUnits="userSpaceOnUse"
+                                        gradientTransform="translate(12 12.1824) rotate(90) scale(12 1.72668)">
+                                        <stop offset="0.145833" stop-color="white" />
+                                        <stop offset="1" stop-color="white" stop-opacity="0" />
+                                    </radialGradient>
+                                </defs>
+                            </svg>
+                            <span class="item_name wow animate__animated animate__jackInTheBox"
+                                data-wow-delay="2.5s">Totem
+                                Animal</span>
+                            <svg class="star second_star" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none">
+                                <g style="mix-blend-mode:color-dodge">
+                                    <rect width="24" height="24" fill="black" />
+                                    <ellipse cx="12.1818" cy="12" rx="1.72668" ry="12"
+                                        fill="url(#paint0_radial_12166_27198)" />
+                                    <ellipse cx="12" cy="12.1824" rx="1.72668" ry="12"
+                                        transform="rotate(-90 12 12.1824)" fill="url(#paint1_radial_12166_27198)" />
+                                </g>
+                                <defs>
+                                    <radialGradient id="paint0_radial_12166_27198" cx="0" cy="0" r="1"
+                                        gradientUnits="userSpaceOnUse"
+                                        gradientTransform="translate(12.1818 12) rotate(90) scale(12 1.72668)">
+                                        <stop offset="0.145833" stop-color="white" />
+                                        <stop offset="1" stop-color="white" stop-opacity="0" />
+                                    </radialGradient>
+                                    <radialGradient id="paint1_radial_12166_27198" cx="0" cy="0" r="1"
+                                        gradientUnits="userSpaceOnUse"
+                                        gradientTransform="translate(12 12.1824) rotate(90) scale(12 1.72668)">
+                                        <stop offset="0.145833" stop-color="white" />
+                                        <stop offset="1" stop-color="white" stop-opacity="0" />
+                                    </radialGradient>
+                                </defs>
+                            </svg>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="swiper features_swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" data-slide="0">
+                        <img class="slider_img" src="./images/features/card_1.webp" alt="image not found">
+                    </div>
+                    <div class="swiper-slide" data-slide="1">
+                        <img class="slider_img" src="./images/features/card_2.webp" alt="image not found">
+                    </div>
+                    <div class="swiper-slide" data-slide="2">
+                        <img class="slider_img" src="./images/features/card_3.webp" alt="image not found">
+                    </div>
+                    <div class="swiper-slide" data-slide="3">
+                        <img class="slider_img" src="./images/features/card_4.webp" alt="image not found">
+                    </div>
+                    <div class="swiper-slide" data-slide="4">
+                        <img class="slider_img" src="./images/features/card_5.webp" alt="image not found">
+                    </div>
+                    <div class="swiper-slide" data-slide="5">
+                        <img class="slider_img" src="./images/features/card_6.webp" alt="image not found">
+                    </div>
+                </div>
+            </div>
+            <a href="functions.html" class="white_btn">Read more</a>
+        </section>
+        <section class="lottery_faq">
+            <div class="container">
+                <div class="content">
+                    <h2 class="lottery_title">Frequently Asked Question</h2>
+                    <div class="lottery_faq_content" id="faqTabs">
+                        <div class="tab_wrapper">
+                            <div class="tabs">
+                                <button class="tab_title">
+                                    <h3 class="title">
+                                        How do I enter the lottery?
+                                    </h3>
+                                    <div class="open_status"></div>
+                                </button>
+                                <div class="tab_content">
+                                    <p class="tab_text">
+                                        To enter the lottery, simply download the Inura app and create an account. Then,
+                                        invite 3 friends using your unique referral code. Once your friends sign up
+                                        using your code, you will automatically be entered into the lottery for a chance
+                                        to win the brand new smartphone and other exciting prizes.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="tabs">
+                                <button class="tab_title">
+                                    <h3 class="title">
+                                        How will I know if I've won?
+                                    </h3>
+                                    <div class="open_status"></div>
+                                </button>
+                                <div class="tab_content">
+                                    <p class="tab_text">
+                                        Winners will be notified via email and an in-app notification. Make sure your
+                                        email address is up to date in your Inura profile settings. We will also
+                                        announce winners on our official social media channels and on the app's
+                                        announcement section.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="tabs">
+                                <button class="tab_title">
+                                    <h3 class="title">
+                                        Can I invite more than 3 friends?
+                                    </h3>
+                                    <div class="open_status"></div>
+                                </button>
+                                <div class="tab_content">
+                                    <p class="tab_text">
+                                        Yes, you can invite as many friends as you like! Every set of 3 friends who sign
+                                        up using your referral code will give you an additional entry into the lottery,
+                                        increasing your chances of winning.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="tabs">
+                                <button class="tab_title">
+                                    <h3 class="title">
+                                        Is there a deadline to enter the lottery?
+                                    </h3>
+                                    <div class="open_status"></div>
+                                </button>
+                                <div class="tab_content">
+                                    <p class="tab_text">
+                                        Yes, the lottery ends on [specific end date]. Make sure to invite your friends
+                                        and have them complete their sign-ups before this date to ensure your entry is
+                                        counted. The countdown timer on the landing page will help you keep track of the
+                                        remaining time.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    {{> footer }}
+</body>
+
+</html>

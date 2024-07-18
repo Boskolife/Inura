@@ -1,6 +1,8 @@
 new WOW().init();
 burgerMenu();
 openPopup();
+timer();
+initTabs();
 
 document.addEventListener('DOMContentLoaded', function () {
   const featuresItems = document.querySelectorAll('.item_name');
@@ -162,6 +164,90 @@ function openPopup() {
         item.style.display = 'none';
       });
       document.body.classList.remove('popup_lock');
+    });
+  });
+}
+
+function timer() {
+  var countDownDate = new Date('Jul 17, 2024 22:00:00').getTime();
+
+  var x = setInterval(function () {
+    var now = new Date().getTime();
+
+    var distance = countDownDate - now;
+
+    var months = Math.floor(distance / (1000 * 60 * 60 * 24 * 30));
+    var days = Math.floor(
+      (distance % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24),
+    );
+    var hours = Math.floor(
+      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+    );
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    var monthsElement = document.getElementById('months_number');
+    var daysElement = document.getElementById('days_number');
+    var hoursElement = document.getElementById('hours_number');
+    var minutesElement = document.getElementById('minutes_number');
+    var secondsElement = document.getElementById('seconds_number');
+
+    if (monthsElement) {
+      monthsElement.innerHTML = months;
+    }
+    if (daysElement) {
+      daysElement.innerHTML = days;
+    }
+    if (hoursElement) {
+      hoursElement.innerHTML = hours;
+    }
+    if (minutesElement) {
+      minutesElement.innerHTML = minutes;
+    }
+    if (secondsElement) {
+      secondsElement.innerHTML = seconds;
+    }
+
+    if (distance < 0) {
+      clearInterval(x);
+      if (monthsElement) {
+        monthsElement.innerHTML = '0';
+      }
+      if (daysElement) {
+        daysElement.innerHTML = '0';
+      }
+      if (hoursElement) {
+        hoursElement.innerHTML = '0';
+      }
+      if (minutesElement) {
+        minutesElement.innerHTML = '0';
+      }
+      if (secondsElement) {
+        secondsElement.innerHTML = '0';
+      }
+    }
+  }, 1000);
+}
+
+function initTabs() {
+  var faqTabs = document.querySelector('#faqTabs');
+  if (!faqTabs) return;
+  var tabs = document.querySelectorAll('.tab_title'),
+    tabsContent = document.querySelectorAll('.tab_content'),
+    tabsParent = document.querySelector('.tab_wrapper'),
+    closeItem = document.querySelectorAll('.open_status');
+
+  function showTabContent() {
+    var i =
+      arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+    tabsContent[i].classList.toggle('show');
+    tabs[i].classList.toggle('tab_active');
+    closeItem[i].classList.toggle('open_active');
+  }
+
+  tabs.forEach(function (item, i) {
+    item.addEventListener('click', () => {
+      showTabContent(i);
     });
   });
 }

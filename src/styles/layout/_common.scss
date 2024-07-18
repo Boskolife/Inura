@@ -1365,5 +1365,536 @@ html {
         }
 
     }
+}
 
+.lottery_title {
+    @include adaptive-value("font-size", 64, 39, 1);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+    text-transform: capitalize;
+    background: linear-gradient(88deg, #FFF 6.17%, rgba(229, 212, 246, 0.80) 105.1%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.lottery_descr {
+    color: rgba(255, 255, 255, 0.80);
+    @include adaptive-value("font-size", 24, 20, 1);
+    line-height: normal;
+}
+
+.lottery_main {
+    position: relative;
+    @include adaptive-value("padding-top", 140, 105, 1);
+    @include adaptive-value("height", 1200, 765, 1);
+
+    @include media('<phone') {
+        padding-bottom: 90px;
+    }
+
+    &::after,
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 26%;
+        z-index: 1;
+    }
+
+    &::after {
+        bottom: 0;
+        background: linear-gradient(0deg, #0E0A1B 0%, rgba(14, 10, 27, 0.00) 100%);
+    }
+
+    &::before {
+        top: 0;
+        background: linear-gradient(180deg, #0E0A1B 0%, rgba(14, 10, 27, 0.00) 100%);
+    }
+
+    .lottery_main_bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .container {
+        @include media('<phone') {
+            height: 100%;
+        }
+    }
+
+    .content {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include media('<phone') {
+            height: 100%;
+            position: relative;
+            z-index: 2;
+        }
+    }
+
+    .lottery_title {
+        max-width: 850px;
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+
+    .lottery_main_descr {
+        margin-bottom: 35px;
+
+        @include media('<phone') {
+            flex: 1 1 auto;
+            margin: 0;
+        }
+    }
+}
+
+.lottery_countdown {
+    position: relative;
+    z-index: 2;
+    margin-top: -80px;
+    @include adaptive-value("margin-top", -80, 80, 1);
+    @include adaptive-value("padding-bottom", 140, 100, 1);
+    padding-bottom: 140px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 333px;
+        background: var(--Landing-Bg---secondary, #231848);
+        filter: blur(137px);
+        display: none;
+        width: 333px;
+        height: 333px;
+        z-index: -1;
+
+        @include media('<phone') {
+            display: block;
+        }
+    }
+
+    @include media('<phone') {
+        margin: 0;
+        padding: 100px 0;
+    }
+
+    .lottery_title {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .countdown_items {
+        max-width: 1050px;
+        width: 100%;
+        margin: 0 auto;
+        height: auto;
+        position: relative;
+    }
+
+    .countdown_items_numbers_wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include adaptive-value("column-gap", 20, 5, 1);
+        @include adaptive-value("padding-top", 65, 20, 1);
+        @include adaptive-value("padding-bottom", 65, 20, 1);
+        @include adaptive-value("padding-right", 65, 20, 1);
+        @include adaptive-value("padding-left", 65, 20, 1);
+    }
+
+    .stars {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .number_wrap,
+    .dots_wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .number_wrap {
+        row-gap: 20px;
+    }
+
+    .dots_wrap {
+        @include adaptive-value("row-gap", 12, 5, 1);
+        @include adaptive-value("margin-bottom", 55, 40, 1);
+    }
+
+    .dot {
+        @include adaptive-value("min-width", 16, 5, 1);
+        @include adaptive-value("min-height", 16, 5, 1);
+    }
+
+    .number {
+        text-shadow: 0px 0px 8.508px rgba(194, 165, 255, 0.20);
+        @include adaptive-value("font-size", 90, 32, 1);
+        font-weight: 500;
+        text-transform: capitalize;
+        background: linear-gradient(180deg, #FFF 0%, #C2BCFF 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .number_body {
+        border: 3px solid #AA9FFF;
+        @include adaptive-value("border-radius", 22, 8, 1);
+        @include adaptive-value("border-width", 3, 1, 1);
+        @include adaptive-value("width", 125, 44, 1);
+        background: linear-gradient(180deg, rgba(145, 130, 255, 0.25) 0%, rgba(145, 130, 255, 0.05) 100%);
+        box-shadow: 0px 0px 56.721px 0px rgba(24, 19, 65, 0.60), 0px 0px 17.016px 0px rgba(31, 24, 85, 0.60) inset;
+        backdrop-filter: blur(5.672131061553955px);
+        text-align: center;
+        @include adaptive-value("padding-top", 13, 5, 1);
+        @include adaptive-value("padding-bottom", 13, 5, 1);
+    }
+
+    .name {
+        text-align: center;
+        font-feature-settings: 'clig'off, 'liga'off;
+        text-shadow: 0px 0px 3px rgba(194, 165, 255, 0.10);
+        @include adaptive-value("font-size", 28, 14, 1);
+        font-weight: 500;
+        background: linear-gradient(180deg, #E4E0FF 0%, rgba(152, 145, 233, 0.80) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+.lottery_works {
+    @include adaptive-value("padding-bottom", 70, 40, 1);
+
+    .lottery_title {
+        text-align: center;
+        @include adaptive-value("margin-bottom", 65, 30, 1);
+    }
+
+    .cards_wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include media('<desktop') {
+            flex-direction: column;
+            gap: 25px;
+        }
+    }
+
+    .card_wrap {
+        position: relative;
+
+        @include media('<desktop') {
+            max-width: 350px;
+            width: 100%;
+        }
+
+        &::before {
+            content: '';
+            border-radius: 20px;
+            border: 1px solid rgba(97, 70, 146, 0.50);
+            // background: red;
+            background: #0E0724;
+            position: absolute;
+            top: -7px;
+            left: -6px;
+            width: 103%;
+            height: 103%;
+            z-index: -1;
+        }
+    }
+
+    .shine_left,
+    .shine_right {
+        position: absolute;
+
+        background: radial-gradient(819.35% 50% at 50% 50%, #8355D6 0%, rgba(18, 9, 43, 0.00) 100%);
+        width: 6px;
+        height: 50%;
+    }
+
+    .shine_left {
+        top: 15%;
+        left: -5px;
+    }
+
+    .shine_right {
+        bottom: 5%;
+        right: -5px;
+    }
+
+    .card {
+        border-radius: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.80);
+        background: rgba(14, 7, 36, 0.01);
+        box-shadow: 0px 0px 64px 0px rgba(94, 25, 182, 0.20) inset;
+        text-align: center;
+        overflow: hidden;
+        position: relative;
+        padding-top: 30px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 29%;
+            background: linear-gradient(180deg, rgba(20, 8, 48, 0.00) 0%, #150830 100%);
+        }
+    }
+
+    .step {
+        color: #9182FF;
+        text-align: center;
+        text-shadow: 0px 0px 20px rgba(26, 15, 51, 0.70);
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 1.44px;
+        text-transform: uppercase;
+        margin-bottom: 17px;
+        display: inline-block;
+    }
+
+    .card_title {
+        color: #FFF;
+        font-feature-settings: 'clig'off, 'liga'off;
+        text-shadow: 0px 0px 7.217px rgba(194, 165, 255, 0.10);
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 140%;
+        padding: 0 20px;
+    }
+
+    .card_img {
+        width: 100%;
+        height: auto;
+    }
+
+    .line {
+        height: 1px;
+        width: 100px;
+        position: relative;
+        z-index: 1;
+
+        @include media('<desktop') {
+            transform: rotate(90deg) translateX(40px);
+            z-index: -1;
+        }
+    }
+}
+
+.lottery_prizes {
+    position: relative;
+    height: auto;
+    @include adaptive-value("margin-top", 70, 40, 1);
+
+    @include media('<tablet') {
+        height: auto;
+    }
+
+    &::after,
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 26%;
+        z-index: 1;
+    }
+
+    &::after {
+        bottom: 0;
+        background: linear-gradient(0deg, #0E0A1B 0%, rgba(14, 10, 27, 0.00) 100%);
+    }
+
+    &::before {
+        top: 0;
+        background: linear-gradient(180deg, #0E0A1B 0%, rgba(14, 10, 27, 0.00) 100%);
+    }
+
+    .lottery_prizes_bg {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        margin-top: -100px;
+
+        @include media('<tablet') {
+            margin-top: 0;
+        }
+    }
+
+    .container,
+    .content {
+        height: 100%;
+
+        @include media('<tablet') {
+            height: auto;
+        }
+    }
+
+    .content {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+    }
+
+    .lottery_title {
+        margin-bottom: 20px;
+    }
+}
+
+.lottery_faq {
+    @include adaptive-value("padding-top", 120, 80, 1);
+    @include adaptive-value("padding-bottom", 140, 150, 1);
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        border-radius: 333px;
+        background: var(--Landing-Bg---secondary, #231848);
+        filter: blur(137px);
+        display: none;
+        width: 333px;
+        height: 333px;
+        z-index: -1;
+
+        @include media('<phone') {
+            display: block;
+        }
+    }
+
+    .lottery_title {
+        text-align: center;
+        @include adaptive-value("margin-bottom", 65, 30, 1);
+    }
+
+    .lottery_faq_content {
+        max-width: 630px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .tabs {
+        position: relative;
+
+        &:not(:first-child) {
+            padding-top: 25px;
+        }
+
+        &:not(:last-child) {
+            padding-bottom: 25px;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background: linear-gradient(90deg, rgba(194, 165, 255, 0.00) 0%, #C2A5FF 51%, rgba(194, 165, 255, 0.00) 100%);
+            }
+        }
+    }
+
+    .tab_title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        width: 100%;
+        padding: 0;
+    }
+
+    .open_status {
+        position: relative;
+        @include adaptive-value("width", 20, 15, 1);
+        @include adaptive-value("height", 20, 15, 1);
+
+        &::after,
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 2px;
+            background-color: #fff;
+            border-radius: 30px;
+        }
+
+        &::after {
+            transform: translate(-50%, -50%) rotate(90deg);
+            transition: all .3s ease 0s;
+        }
+    }
+
+    .open_active {
+        &::after {
+            transform: translate(-50%, -50%) rotate(0deg);
+            transition: all .3s ease 0s;
+        }
+    }
+
+    .title {
+        color: #FFF;
+        text-shadow: 0px 0px 7.217px rgba(194, 165, 255, 0.10);
+        @include adaptive-value("font-size", 24, 20, 1);
+        font-weight: 500;
+        line-height: 140%;
+        text-align: start;
+    }
+
+    .tab_content {
+        height: 0;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0s ease 0s,
+            visibility .3s ease 0s,
+            height .3s ease 0s;
+    }
+
+    .show {
+        margin-top: 12px;
+        height: auto;
+        visibility: visible;
+        opacity: 1;
+        transition: all .3s ease 0s;
+    }
+
+    .tab_text {
+        color: rgba(255, 255, 255, 0.60);
+        font-size: 16px;
+        line-height: 140%;
+    }
 }
