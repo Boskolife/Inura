@@ -3,6 +3,8 @@ burgerMenu();
 openPopup();
 timer();
 initTabs();
+getUserInfo();
+closeEmailError();
 
 document.addEventListener('DOMContentLoaded', function () {
   const featuresItems = document.querySelectorAll('.item_name');
@@ -115,6 +117,109 @@ if (window.innerWidth < 1024) {
     });
   }
 }
+
+function getUserInfo() {
+  const lotterySubmitButton = document.querySelector('#lottery_button_send');
+
+  lotterySubmitButton.addEventListener('click', async () => {
+    const currentUrl = window.location.href;
+    const currentLang = currentUrl.split('/')[3].split('-')[1];
+
+    const userEmail = document.querySelector('.lottery_input').value;
+    const emailRegex = new RegExp(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{1,}$/);
+
+    const lotteryStepOne = document.getElementById("lottery_step_one");
+    const lotteryStepTwo = document.getElementById("lottery_step_two");
+
+    if (!emailRegex.test(userEmail)) {
+      let errorText = "Incorrect email format";
+
+      if (currentLang === "uk") {
+        errorText = "Неправильний формат пошти"
+      } else if (currentLang === "es") {
+        errorText = "Formato de correo electrónico incorrecto";
+      } else if (currentLang === "ru") {
+        errorText = "Неправильный формат почты";
+      }
+
+      showLotteryInputError(errorText);
+
+      return;
+    }
+
+    const response = await fetch(`https://lottery-inura.azurewebsites.net/user?email=${userEmail}`);
+    const json = await response.json();
+
+    if (!json.name) {
+      const lotteryStepError = document.getElementById("lottery_step_error");
+      const lotteryInvalidEmail = document.getElementById("lottery_card_email");
+
+      lotteryStepOne.style.display = "none";
+      lotteryStepError.style.display = "flex";
+
+      lotteryInvalidEmail.textContent = userEmail;
+      document.querySelector('.lottery_input').value = "";
+
+      resetErrorLotteryInput();
+
+      return;
+    }
+
+
+    lotteryStepOne.style.display = "none";
+    lotteryStepTwo.style.display = "flex";
+
+    let hiText = "Hi";
+    let strangerText = "Stranger";
+
+    if (currentLang === "uk") {
+      hiText = "Привіт";
+      strangerText = "Незнайомець";
+    } else if (currentLang === "es") {
+      hiText = "Hola";
+      strangerText = "Extraño";
+    } else if (currentLang === "ru") {
+      hiText = "Привет";
+      strangerText = "Незнакомец";
+    }
+
+    resetErrorLotteryInput();
+
+    document.getElementById("lottery_card_title").textContent = `${hiText}, ${json.name ?? strangerText}!`;
+    document.getElementById("lottery_card_users").textContent = `${json.invitedUsersCount ?? 0}`;
+    document.getElementById("lottery_card_chances").textContent = `${json.shances ?? 0}x`;
+  });
+}
+
+function closeEmailError() {
+  const lotteryCross = document.querySelector(".lottery_error_close");
+
+  lotteryCross.addEventListener("click", () => {
+    const lotteryStepOne = document.getElementById("lottery_step_one");
+    const lotteryStepError = document.getElementById("lottery_step_error");
+
+    lotteryStepError.style.display = "none";
+    lotteryStepOne.style.display = "flex";
+  });
+}
+
+function showLotteryInputError(text) {
+  const input = document.querySelector('.lottery_input');
+  input.style.border = "1px solid #EF2F6E"
+
+  const inputError = document.querySelector('.lottery_input_error');
+  inputError.textContent = text;
+  inputError.style.display = "block";
+}
+
+function resetErrorLotteryInput() {
+  const inputError = document.querySelector('.lottery_input_error');
+  inputError.style.display = "none";
+
+  const input = document.querySelector('.lottery_input');
+  input.style.border = "1px solid #AA86F7";
+}
+
 
 function burgerMenu() {
   const burger = document.querySelector('.burger_menu');

@@ -143,6 +143,73 @@
             </div>
             <img src="./images/lottery/lottery_prizes_bg.webp" alt="image not found" class="lottery_prizes_bg">
         </section>
+
+        <section class="lottery_chance">
+            <picture class="planet">
+                <source srcset="./images/planet_phone.webp" media="(max-width: 650px)" />
+                <img src="./images/planet.webp" alt="planet">
+            </picture>
+            <div class="container">
+                <div class="lottery_wrapper">
+                    <div class="lottery_container">
+                        <div class="shine_left"></div>
+                        <div class="shine_right"></div>
+                        <img class="curve_line_left" src="./images/curve_line.svg" alt="line">
+                        <img class="curve_line_right" src="./images/curve_line.svg" alt="line">
+                        <img class="circle_gradient" src="./images/circle_gradient.svg" alt="circle"></img>
+
+                        <div id="lottery_step_one" class="lottery_content">
+                            <div class="lottery_content_text">
+                                <h3><span>Find out your</span> chance of winning</h3>
+                                <p class="lottery_instruction">Enter the email you provided in the Inura app to see the
+                                    number of users you invited
+                                    and
+                                    your
+                                    chances of winning!
+                                </p>
+                            </div>
+                            <div class="lottery_input_wrap">
+                                <div class="lottery_input_container">
+                                    <label class="lottery_label_name">Email</label>
+                                    <input class="lottery_input" type="email" placeholder="Enter your email">
+                                    <span class="lottery_input_error">Enter the correct email</span>
+                                </div>
+                            </div>
+                            <button id="lottery_button_send" class="white_btn">Submit</button>
+                        </div>
+                        <div id="lottery_step_two" class="lottery_content">
+                            <div class="lottery_content_text">
+                                <h3 id="lottery_card_title">Hi, Adeline!</h3>
+                                <p class="lottery_subtitle">So far, you have invited <span
+                                        id="lottery_card_users">x</span> users! Your chance of
+                                    winning:
+                                    <span id="lottery_card_chances">100x</span>
+                                </p>
+                            </div>
+                            <img class="lottery_cat" src="./images/cat.png" alt="cat">
+                        </div>
+
+                        <div id="lottery_step_error" class="lottery_content">
+                            <div class="lottery_content_text">
+                                <h3 id="lottery_card_title">Oops!</h3>
+                                <p class="lottery_subtitle">It looks like the email
+                                    <span id="lottery_card_email">heisenberg@gmail.com</span> is not in our database.
+                                    Download the Inura app or
+                                    add your email in the settings if it is already downloaded.
+                                </p>
+                            </div>
+                            <img class="lottery_error_cat" src="./images/lottery_error_cat.png" alt="error_cat">
+                            <a href="#" target="_blank" class="app_link">
+                                <img src="./images/main/Google_Play.webp" alt="Google Play">
+                            </a>
+                            <img class="lottery_error_close" src="./images/x-mark.svg" alt="cross">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="lottery_secrets features">
             <div class="container">
                 <div class="content">

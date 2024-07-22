@@ -15,6 +15,16 @@ export default defineConfig({
   // server:{
   //   host:'192.168.0.105',
   // },
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://195.201.30.220:8100',
+        changeOrigin: true,
+        secure: false,
+        rewrite: path => path.replace(/^\/api/, '')
+      }
+    }
+  },
   publicDir: '../public',
   plugins: [
     handlebars({ partialDirectory: resolve(__dirname, 'src/templates') }),
