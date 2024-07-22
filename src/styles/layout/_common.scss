@@ -1572,7 +1572,7 @@ html {
 
     .name {
         text-align: center;
-        font-feature-settings: 'clig'off, 'liga'off;
+        font-feature-settings: 'clig' off, 'liga' off;
         text-shadow: 0px 0px 3px rgba(194, 165, 255, 0.10);
         @include adaptive-value("font-size", 28, 14, 1);
         font-weight: 500;
@@ -1679,7 +1679,7 @@ html {
 
     .card_title {
         color: #FFF;
-        font-feature-settings: 'clig'off, 'liga'off;
+        font-feature-settings: 'clig' off, 'liga' off;
         text-shadow: 0px 0px 7.217px rgba(194, 165, 255, 0.10);
         font-size: 24px;
         font-weight: 500;
@@ -1899,6 +1899,16 @@ html {
                 @include adaptive-value("padding-right", 36, 20, 1);
                 @include adaptive-value("padding-left", 36, 20, 1);
 
+                .lottery_input_error {
+                    display: none;
+                    color: var(--Secondary-Red, #EF2F6E);
+                    font-feature-settings: 'clig' off, 'liga' off;
+                    font-size: 10px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%;
+                }
+
                 h3 {
                     text-align: center;
                     @include adaptive-value("font-size", 48, 30, 1);
@@ -1926,7 +1936,7 @@ html {
                     margin-top: 6px;
                     color: rgba(255, 255, 255, 0.80);
                     text-align: center;
-                    font-feature-settings: 'clig'off, 'liga'off;
+                    font-feature-settings: 'clig' off, 'liga' off;
                     @include adaptive-value("font-size", 24, 16, 1);
                     font-style: normal;
                     font-weight: 400;
@@ -1936,7 +1946,7 @@ html {
                 .lottery_subtitle {
                     color: var(--White-White-100, var(--Colors-Base-white, #FFF));
                     text-align: center;
-                    font-feature-settings: 'clig'off, 'liga'off;
+                    font-feature-settings: 'clig' off, 'liga' off;
                     text-shadow: 0px 0px 7.217px rgba(194, 165, 255, 0.10);
                     @include adaptive-value("font-size", 24, 16, 1);
                     font-style: normal;
@@ -1948,7 +1958,7 @@ html {
                         background-clip: text;
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;
-                        font-feature-settings: 'clig'off, 'liga'off;
+                        font-feature-settings: 'clig' off, 'liga' off;
                         font-style: normal;
                         font-weight: 500;
                         line-height: 140%;
@@ -1961,6 +1971,20 @@ html {
                     width: 500px;
                     height: 260px;
                     object-fit: cover;
+                }
+
+                .lottery_error_cat {
+                    position: absolute;
+                    bottom: 0;
+                    border-radius: 15px;
+                }
+
+                .lottery_error_close {
+                    cursor: pointer;
+                    z-index: 3;
+                    position: absolute;
+                    top: 20px;
+                    right: 20px;
                 }
 
                 .lottery_input_wrap {
@@ -2034,7 +2058,8 @@ html {
 
             }
 
-            #lottery_step_two {
+            #lottery_step_two,
+            #lottery_step_error {
                 display: none;
                 height: 400px;
             }
